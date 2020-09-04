@@ -3,6 +3,7 @@
 
 #include<QString>
 #include<QPoint>
+#include <QVector>
 
 class BendSurfaceData
 {
@@ -16,6 +17,7 @@ public:
 //    Bendinfo();
 private:
     QPoint point;
+    QVector<QPoint> points;
 };
 
 class Surface
