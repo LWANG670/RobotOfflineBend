@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="coin3d">
+      <UniqueIdentifier>{cca8bc6f-8caf-4454-9a71-e5768920acd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileProgram">
+      <UniqueIdentifier>{c0335668-1dc5-4ae5-b2bc-97877af4af0d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fileProgram\bendsurfacedata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="globalvars.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\progressdlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectEquipment\selectequ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3d\QtCoin3D_Robot.cpp">
+      <Filter>coin3d</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3d\Robot.cpp">
+      <Filter>coin3d</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3d\SoDHTransform.cpp">
+      <Filter>coin3d</Filter>
+    </ClCompile>
+    <ClCompile Include="fileProgram\fileprogram.cpp">
+      <Filter>fileProgram</Filter>
+    </ClCompile>
+    <ClCompile Include="fileProgram\fileshower.cpp">
+      <Filter>fileProgram</Filter>
+    </ClCompile>
+    <ClCompile Include="fileProgram\txtfileprogram.cpp">
+      <Filter>fileProgram</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fileProgram\bendsurfacedata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="globalvars.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dialogs\progressdlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SelectEquipment\selectequ.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="Coin3d\Robot.h">
+      <Filter>coin3d</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3d\SoDHTransform.h">
+      <Filter>coin3d</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3d\ui_QtCoin3D_Robot.h">
+      <Filter>coin3d</Filter>
+    </ClInclude>
+    <ClInclude Include="fileProgram\FileProgram.h">
+      <Filter>fileProgram</Filter>
+    </ClInclude>
+    <ClInclude Include="fileProgram\txtfileprogram.h">
+      <Filter>fileProgram</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="dialogs\progressdlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SelectEquipment\selectequ.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Coin3d\QtCoin3D_Robot.ui">
+      <Filter>coin3d</Filter>
+    </QtUic>
+    <QtUic Include="fileProgram\fileshower.ui">
+      <Filter>fileProgram</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Bend.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\Center.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\Display.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\Machine.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\Program.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\Robot.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\Select.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\Setting.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\Show.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\bendmachine.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\open.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="resource.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="img\save.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\zoom-in.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\zoom-out.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Coin3d\QtCoin3D_Robot.h">
+      <Filter>coin3d</Filter>
+    </QtMoc>
+    <QtMoc Include="fileProgram\fileshower.h">
+      <Filter>fileProgram</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>
