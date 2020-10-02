@@ -12,7 +12,6 @@ FileShower::FileShower(QWidget *parent) :
 FileShower::~FileShower()
 {
     delete ui;
-    delete btn1;
 }
 
 void FileShower::resizeWindow(int width, int height)
