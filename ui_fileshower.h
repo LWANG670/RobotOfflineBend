@@ -1,4 +1,4 @@
-﻿/********************************************************************************
+/********************************************************************************
 ** Form generated from reading UI file 'fileshower.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.14.0
@@ -50,8 +50,8 @@ public:
 
     void retranslateUi(QWidget *FileShower)
     {
-        FileShower->setWindowTitle(QCoreApplication::translate("FileShower", "Form", NULL));
-        pushButton->setText(QCoreApplication::translate("FileShower", "\346\226\207\344\273\266\345\261\225\347\244\272\347\225\214\351\235\242", NULL));
+        FileShower->setWindowTitle(QCoreApplication::translate("FileShower", "Form", nullptr));
+        pushButton->setText(QCoreApplication::translate("FileShower", "\346\226\207\344\273\266\345\261\225\347\244\272\347\225\214\351\235\242", nullptr));
     } // retranslateUi
 
 };

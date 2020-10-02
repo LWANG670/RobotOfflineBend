@@ -66,7 +66,7 @@ void MainWindow::on_btnBend_clicked()
 void MainWindow::on_btnSelect_clicked()
 {
     hideparentwidgets();
-    pSelectWidget->resizeWindow(width(),height());
+    pSelectWidget->resizeWindow(ui->childwidget->width(), ui->childwidget->height());
     ui->widget_4->setStyleSheet("background-color: rgb(255,235,205);");
     pSelectWidget->show();
 }
@@ -92,7 +92,7 @@ void MainWindow::on_btnProg_clicked()
 void MainWindow::on_btnShow_clicked()
 {
     hideparentwidgets();
-    pShowerWidget->resizeWindow(width(),height());
+    pShowerWidget->resizeWindow(ui->childwidget->width(), ui->childwidget->height());
     ui->widget_8->setStyleSheet("background-color: rgb(255,235,205);");
     pShowerWidget->show();
     //如果没有文件，添加一个判断条件，读取文件
