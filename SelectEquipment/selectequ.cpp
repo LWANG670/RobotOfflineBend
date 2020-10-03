@@ -24,6 +24,7 @@ SelectEqu::SelectEqu(QWidget *parent) :
 	simulatorView->setBackgroundColor(SbColor(0.60, 0.77, 0.43));
 	simulatorView->show();
 	SoQt::show(ui->widget_3);
+	//text
 
 	
 

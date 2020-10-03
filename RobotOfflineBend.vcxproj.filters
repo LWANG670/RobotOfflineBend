@@ -51,6 +51,9 @@
     <Filter Include="fileProgram">
       <UniqueIdentifier>{c0335668-1dc5-4ae5-b2bc-97877af4af0d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Dialog">
+      <UniqueIdentifier>{49200cbf-b4c7-4e37-8b57-0bcbaef015e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="fileProgram\bendsurfacedata.cpp">
@@ -63,9 +66,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mainwindow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="dialogs\progressdlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SelectEquipment\selectequ.cpp">
@@ -86,8 +86,8 @@
     <ClCompile Include="fileProgram\fileshower.cpp">
       <Filter>fileProgram</Filter>
     </ClCompile>
-    <ClCompile Include="fileProgram\txtfileprogram.cpp">
-      <Filter>fileProgram</Filter>
+    <ClCompile Include="BendFileReader.cpp">
+      <Filter>Dialog</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -98,9 +98,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <QtMoc Include="mainwindow.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="dialogs\progressdlg.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="SelectEquipment\selectequ.h">
@@ -118,9 +115,6 @@
     <ClInclude Include="fileProgram\FileProgram.h">
       <Filter>fileProgram</Filter>
     </ClInclude>
-    <ClInclude Include="fileProgram\txtfileprogram.h">
-      <Filter>fileProgram</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="debug\moc_predefs.h.cbt">
@@ -134,9 +128,6 @@
     <QtUic Include="mainwindow.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="dialogs\progressdlg.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
     <QtUic Include="SelectEquipment\selectequ.ui">
       <Filter>Form Files</Filter>
     </QtUic>
@@ -145,6 +136,9 @@
     </QtUic>
     <QtUic Include="fileProgram\fileshower.ui">
       <Filter>fileProgram</Filter>
+    </QtUic>
+    <QtUic Include="BendFileReader.ui">
+      <Filter>Dialog</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
@@ -200,6 +194,9 @@
     </QtMoc>
     <QtMoc Include="fileProgram\fileshower.h">
       <Filter>fileProgram</Filter>
+    </QtMoc>
+    <QtMoc Include="BendFileReader.h">
+      <Filter>Dialog</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>

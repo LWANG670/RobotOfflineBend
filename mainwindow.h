@@ -8,7 +8,6 @@
 #include"fileProgram/txtfileprogram.h"
 #include<QFileDialog>
 #include<QTimer>
-#include"dialogs/progressdlg.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
