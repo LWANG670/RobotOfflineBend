@@ -42,7 +42,7 @@
       </font>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>文件名：</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

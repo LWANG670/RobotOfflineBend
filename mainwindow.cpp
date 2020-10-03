@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include<QMouseEvent>
-#include"globalvars.h"
 #include "BendFileReader.h"
 
 
@@ -107,7 +106,8 @@ void MainWindow::on_action_O_triggered()
     BendFileReader* filereader = new BendFileReader();
     if (filereader->exec() == QDialog::Accepted)
     {
-
+        ui->labFilename->setText(QString::fromLocal8Bit("ÎÄ¼þÃû£º") + g_filePath);
+        bendDate = filereader->getBendData();
     }
     delete filereader;
 }

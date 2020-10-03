@@ -139,7 +139,7 @@ public:
     {
         BendFileReader->setWindowTitle(QCoreApplication::translate("BendFileReader", "BendFileReader", nullptr));
         showlabel->setText(QString());
-        filepath->setText(QCoreApplication::translate("BendFileReader", "TextLabel", nullptr));
+        filepath->setText(QCoreApplication::translate("BendFileReader", "\346\226\207\344\273\266\345\220\215\357\274\232", nullptr));
         btn_choose->setText(QCoreApplication::translate("BendFileReader", "\351\200\211\345\217\226\351\233\266\344\273\266", nullptr));
         btn_sure->setText(QCoreApplication::translate("BendFileReader", "\345\257\274\345\205\245\351\233\266\344\273\266", nullptr));
         btn_cancle->setText(QCoreApplication::translate("BendFileReader", "\345\217\226\346\266\210", nullptr));

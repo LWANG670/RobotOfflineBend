@@ -40,7 +40,7 @@ void BendFileReader::btnSureClicked()
 	    QString type = fileName.split(".").at(1);
 	    if(type=="txt")
 	    {
-			ui.filepath->setText(g_filePath);
+			ui.filepath->setText(QString::fromLocal8Bit("ÎÄ¼þÃû£º") + g_filePath);
 			QString jpgpath = g_filePath.mid(0, g_filePath.size()-3) + "jpg";
 			ui.showlabel->setPixmap(QPixmap(jpgpath));
 			txtReader(g_filePath);

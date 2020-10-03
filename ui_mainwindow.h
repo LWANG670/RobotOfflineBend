@@ -418,7 +418,7 @@ public:
         btnDiaplay->setText(QCoreApplication::translate("MainWindow", "\344\270\211\347\273\264\345\261\225\347\244\272", nullptr));
         btnProg->setText(QCoreApplication::translate("MainWindow", "\344\273\243\347\240\201\347\256\241\347\220\206", nullptr));
         btnShow->setText(QCoreApplication::translate("MainWindow", "\345\267\245\344\273\266\346\230\276\347\244\272", nullptr));
-        labFilename->setText(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266\345\220\215\357\274\232\343\200\202\343\200\202\343\200\202\343\200\202\343\200\202\343\200\202", nullptr));
+        labFilename->setText(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266\345\220\215\357\274\232", nullptr));
         menu_F->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266(&F)", nullptr));
         menu_V->setTitle(QCoreApplication::translate("MainWindow", "\350\247\206\345\233\276(&V)", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\345\260\217\347\216\251\346\204\217", nullptr));

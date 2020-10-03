@@ -7,9 +7,10 @@
 #include"fileProgram/fileshower.h"
 #include<QFileDialog>
 #include<QTimer>
+#include"globalvars.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui { class MainWindow;}
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
@@ -46,6 +47,9 @@ private:
     SelectEqu *pSelectWidget;
     FileShower *pShowerWidget;
     //QString filename;
+
+    //私有数据
+    BendData bendDate;
 
     QGraphicsDropShadowEffect *shadow;//阴影效果
 
