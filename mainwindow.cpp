@@ -30,7 +30,6 @@ MainWindow::MainWindow(QWidget *parent)
     pShowerWidget=new FileShower(ui->childwidget);
     pShowerWidget->hide();
 
-    pFileProgram=nullptr;
 }
 
 MainWindow::~MainWindow()
@@ -40,8 +39,6 @@ MainWindow::~MainWindow()
         delete pSelectWidget;
     if(pShowerWidget)
         delete pShowerWidget;
-    if(pFileProgram)
-        delete pFileProgram;
 }
 
 void MainWindow::hideparentwidgets()
@@ -113,11 +110,6 @@ void MainWindow::on_action_O_triggered()
 
     }
     delete filereader;
-    //×°Èë
-    if(!pFileProgram)
-    {
-
-    }
 }
 
 

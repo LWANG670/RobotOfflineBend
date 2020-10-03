@@ -25,7 +25,8 @@ class Ui_BendFileReader
 {
 public:
     QVBoxLayout *verticalLayout;
-    QLabel *label;
+    QLabel *showlabel;
+    QLabel *filepath;
     QWidget *widget;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
@@ -45,16 +46,27 @@ public:
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        label = new QLabel(BendFileReader);
-        label->setObjectName(QString::fromUtf8("label"));
+        showlabel = new QLabel(BendFileReader);
+        showlabel->setObjectName(QString::fromUtf8("showlabel"));
         QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy);
-        label->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 233, 225);"));
+        sizePolicy.setHeightForWidth(showlabel->sizePolicy().hasHeightForWidth());
+        showlabel->setSizePolicy(sizePolicy);
+        showlabel->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 233, 225);"));
+        showlabel->setAlignment(Qt::AlignCenter);
 
-        verticalLayout->addWidget(label);
+        verticalLayout->addWidget(showlabel);
+
+        filepath = new QLabel(BendFileReader);
+        filepath->setObjectName(QString::fromUtf8("filepath"));
+        QFont font;
+        font.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
+        font.setPointSize(14);
+        filepath->setFont(font);
+        filepath->setAlignment(Qt::AlignCenter);
+
+        verticalLayout->addWidget(filepath);
 
         widget = new QWidget(BendFileReader);
         widget->setObjectName(QString::fromUtf8("widget"));
@@ -70,9 +82,6 @@ public:
         btn_choose->setObjectName(QString::fromUtf8("btn_choose"));
         sizePolicy.setHeightForWidth(btn_choose->sizePolicy().hasHeightForWidth());
         btn_choose->setSizePolicy(sizePolicy);
-        QFont font;
-        font.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
-        font.setPointSize(14);
         btn_choose->setFont(font);
 
         horizontalLayout->addWidget(btn_choose);
@@ -117,6 +126,7 @@ public:
 
         verticalLayout->setStretch(0, 6);
         verticalLayout->setStretch(1, 1);
+        verticalLayout->setStretch(2, 1);
 
         retranslateUi(BendFileReader);
         QObject::connect(btn_cancle, SIGNAL(clicked()), BendFileReader, SLOT(close()));
@@ -128,7 +138,8 @@ public:
     void retranslateUi(QDialog *BendFileReader)
     {
         BendFileReader->setWindowTitle(QCoreApplication::translate("BendFileReader", "BendFileReader", nullptr));
-        label->setText(QString());
+        showlabel->setText(QString());
+        filepath->setText(QCoreApplication::translate("BendFileReader", "TextLabel", nullptr));
         btn_choose->setText(QCoreApplication::translate("BendFileReader", "\351\200\211\345\217\226\351\233\266\344\273\266", nullptr));
         btn_sure->setText(QCoreApplication::translate("BendFileReader", "\345\257\274\345\205\245\351\233\266\344\273\266", nullptr));
         btn_cancle->setText(QCoreApplication::translate("BendFileReader", "\345\217\226\346\266\210", nullptr));

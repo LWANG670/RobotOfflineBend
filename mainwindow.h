@@ -5,7 +5,6 @@
 #include<QGraphicsDropShadowEffect>
 #include "SelectEquipment/selectequ.h"
 #include"fileProgram/fileshower.h"
-#include"fileProgram/txtfileprogram.h"
 #include<QFileDialog>
 #include<QTimer>
 
@@ -46,7 +45,6 @@ private:
     Ui::MainWindow *ui;
     SelectEqu *pSelectWidget;
     FileShower *pShowerWidget;
-    FileProgram *pFileProgram;//文件选取类
     //QString filename;
 
     QGraphicsDropShadowEffect *shadow;//阴影效果

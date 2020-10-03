@@ -80,9 +80,6 @@
     <ClCompile Include="Coin3d\SoDHTransform.cpp">
       <Filter>coin3d</Filter>
     </ClCompile>
-    <ClCompile Include="fileProgram\fileprogram.cpp">
-      <Filter>fileProgram</Filter>
-    </ClCompile>
     <ClCompile Include="fileProgram\fileshower.cpp">
       <Filter>fileProgram</Filter>
     </ClCompile>
@@ -111,9 +108,6 @@
     </ClInclude>
     <ClInclude Include="Coin3d\ui_QtCoin3D_Robot.h">
       <Filter>coin3d</Filter>
-    </ClInclude>
-    <ClInclude Include="fileProgram\FileProgram.h">
-      <Filter>fileProgram</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

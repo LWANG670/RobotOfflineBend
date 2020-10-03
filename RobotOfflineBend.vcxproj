@@ -206,7 +206,6 @@
     <ClCompile Include="Coin3d\Robot.cpp" />
     <ClCompile Include="Coin3d\SoDHTransform.cpp" />
     <ClCompile Include="fileProgram\bendsurfacedata.cpp" />
-    <ClCompile Include="fileProgram\fileprogram.cpp" />
     <ClCompile Include="fileProgram\fileshower.cpp" />
     <ClCompile Include="globalvars.cpp" />
     <ClCompile Include="main.cpp" />
@@ -219,7 +218,6 @@
     <ClInclude Include="Coin3d\Robot.h" />
     <ClInclude Include="Coin3d\SoDHTransform.h" />
     <ClInclude Include="Coin3d\ui_QtCoin3D_Robot.h" />
-    <ClInclude Include="fileProgram\FileProgram.h" />
     <ClInclude Include="fileProgram\bendsurfacedata.h" />
     <QtMoc Include="fileProgram\fileshower.h">
     </QtMoc>
