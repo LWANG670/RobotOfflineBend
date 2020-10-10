@@ -2,6 +2,7 @@
 #define SELECTEQU_H
 
 #include <QWidget>
+#include <QPushButton>
 #include"Coin3d/QtCoin3D_Robot.h"
 #include"Coin3d/Robot.h"
 
@@ -35,6 +36,19 @@ private:
 
     // Viewer
     SoQtExaminerViewer* simulatorView;
+
+    //Ë½ÓÐº¯Êý
+    void selectChange(QByteArray selectname);
+
+private slots:
+    void btnMachineClick();
+    void btnRobotClick();
+    void btnCenterClick();
+    void btnFlipClick();
+    void btnUpClick();
+    void btnDownClick();
+    void btnSelectClick();
+    
 };
 
 #endif // SELECTEQU_H

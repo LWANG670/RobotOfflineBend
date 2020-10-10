@@ -55,7 +55,10 @@
         <property name="styleSheet">
          <string notr="true"/>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1,1,1,1,1,4">
+        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1,1,1,1,1,2">
+         <property name="spacing">
+          <number>20</number>
+         </property>
          <property name="sizeConstraint">
           <enum>QLayout::SetMinimumSize</enum>
          </property>
@@ -86,6 +89,10 @@
              <weight>75</weight>
              <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;
+</string>
            </property>
            <property name="text">
             <string>折弯机</string>
@@ -121,6 +128,10 @@
              <bold>true</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;
+</string>
+           </property>
            <property name="text">
             <string>机器人</string>
            </property>
@@ -154,6 +165,10 @@
              <weight>75</weight>
              <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;
+</string>
            </property>
            <property name="text">
             <string>对中台</string>
@@ -192,6 +207,10 @@
              <bold>true</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;
+</string>
+           </property>
            <property name="text">
             <string>翻面架</string>
            </property>
@@ -225,6 +244,10 @@
              <weight>75</weight>
              <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;
+</string>
            </property>
            <property name="text">
             <string>上料台</string>
@@ -260,6 +283,10 @@
              <bold>true</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;
+</string>
+           </property>
            <property name="text">
             <string>下料台</string>
            </property>
@@ -293,7 +320,224 @@
        </widget>
       </item>
       <item>
-       <widget class="QWidget" name="widget_4" native="true"/>
+       <widget class="QWidget" name="widget_4" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2,1">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QWidget" name="widget_5" native="true">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(240, 240, 240);</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,1,1,1,1,1">
+            <property name="leftMargin">
+             <number>4</number>
+            </property>
+            <property name="rightMargin">
+             <number>4</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <widget class="QLabel" name="labTitle">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>楷体</family>
+                  <pointsize>18</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>XXX选取</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QLabel" name="labType">
+                <property name="font">
+                 <font>
+                  <family>楷体</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>型号：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineName">
+                <property name="font">
+                 <font>
+                  <family>楷体</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1">
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnSelect">
+                <property name="font">
+                 <font>
+                  <family>楷体</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;
+</string>
+                </property>
+                <property name="text">
+                 <string>数据库选取</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QLabel" name="labXpos">
+                <property name="font">
+                 <font>
+                  <family>楷体</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>X轴坐标：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineXpos">
+                <property name="font">
+                 <font>
+                  <family>楷体</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QLabel" name="labYpos">
+                <property name="font">
+                 <font>
+                  <family>楷体</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Y轴坐标：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineYpos">
+                <property name="font">
+                 <font>
+                  <family>楷体</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QLabel" name="labZangle">
+                <property name="font">
+                 <font>
+                  <family>楷体</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Z轴旋转：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineZangle">
+                <property name="font">
+                 <font>
+                  <family>楷体</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labShow">
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(212, 212, 212);</string>
+           </property>
+           <property name="text">
+            <string>showwidget</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </item>
      </layout>
     </widget>
