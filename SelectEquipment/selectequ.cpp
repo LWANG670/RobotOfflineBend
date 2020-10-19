@@ -7,6 +7,7 @@ SelectEqu::SelectEqu(QWidget *parent) :
     ui(new Ui::SelectEqu)
 {
     ui->setupUi(this);
+	//初始化ui界面
 
 	SoQt::init(ui->widget_3);
 
@@ -33,7 +34,16 @@ SelectEqu::SelectEqu(QWidget *parent) :
 	connect(ui->btnFlip, &QPushButton::clicked, this, &SelectEqu::btnFlipClick);
 	connect(ui->btnUp, &QPushButton::clicked, this, &SelectEqu::btnUpClick);
 	connect(ui->btnDown, &QPushButton::clicked, this, &SelectEqu::btnDownClick);
-	connect(ui->btnSelect,&QPushButton::clicked, this, &SelectEqu::btnSelectClick);
+	//1-折弯机 2-机器人 3-对中台 4-翻面架 5-上料台 6-下料台
+
+	connect(ui->btnMachineSelect,&QPushButton::clicked, this, &SelectEqu::btnMachineSelectClick);
+	connect(ui->btnRobotSelect, &QPushButton::clicked, this, &SelectEqu::btnRobotSelectClick);
+	connect(ui->btnCenterSelect, &QPushButton::clicked, this, &SelectEqu::btnCenterSelectClick);
+	connect(ui->btnFlipSelect, &QPushButton::clicked, this, &SelectEqu::btnFlipSelectClick);
+	connect(ui->btnUpSelect, &QPushButton::clicked, this, &SelectEqu::btnUpSelectClick);
+	connect(ui->btnDownSelect, &QPushButton::clicked, this, &SelectEqu::btnDownSelectClick);
+
+	
 	
 
     //coinedRobot=new QtCoin3D_Robot(ui->widget_3);
@@ -52,14 +62,13 @@ void SelectEqu::resizeWindow(int width, int height)
 
 void SelectEqu::selectChange(QByteArray selectname)
 {
-	ui->labTitle->setText(QString::fromLocal8Bit(selectname+"选取"));
-	ui->labType->setText(QString::fromLocal8Bit(selectname + "型号："));
 
 	//读取XML文件
 }
 
 void SelectEqu::btnMachineClick()
 {
+	ui->stackedWidget->setCurrentIndex(0);
 	ui->labShow->setText(QString::fromLocal8Bit("折弯机"));
 	selectChange("折弯机");
 }
@@ -68,24 +77,28 @@ void SelectEqu::btnMachineClick()
 
 void SelectEqu::btnRobotClick()
 {
+	ui->stackedWidget->setCurrentIndex(1);
 	ui->labShow->setText(QString::fromLocal8Bit("机器人"));
 	selectChange("机器人");
 }
 
 void SelectEqu::btnCenterClick()
 {
+	ui->stackedWidget->setCurrentIndex(2);
 	ui->labShow->setText(QString::fromLocal8Bit("对中台"));
 	selectChange("对中台");
 }
 
 void SelectEqu::btnFlipClick()
 {
+	ui->stackedWidget->setCurrentIndex(3);
 	ui->labShow->setText(QString::fromLocal8Bit("翻面架"));
 	selectChange("翻面架");
 }
 
 void SelectEqu::btnUpClick()
 {
+	ui->stackedWidget->setCurrentIndex(4);
 	ui->labShow->setText(QString::fromLocal8Bit("上料台"));
 	selectChange("上料台");
 
@@ -93,14 +106,40 @@ void SelectEqu::btnUpClick()
 
 void SelectEqu::btnDownClick()
 {
+	ui->stackedWidget->setCurrentIndex(5);
 	ui->labShow->setText(QString::fromLocal8Bit("下料台"));
 	selectChange("下料台");
 }
 
 //数据库选取摁扭
-void SelectEqu::btnSelectClick()
+void SelectEqu::btnMachineSelectClick()
 {
-	ui->labShow->setText(QString::fromLocal8Bit("选取"));
+	
+}
+
+void SelectEqu::btnRobotSelectClick()
+{
+
+}
+
+void SelectEqu::btnCenterSelectClick()
+{
+
+}
+
+void SelectEqu::btnFlipSelectClick()
+{
+
+}
+
+void SelectEqu::btnUpSelectClick()
+{
+
+}
+
+void SelectEqu::btnDownSelectClick()
+{
+
 }
 
 

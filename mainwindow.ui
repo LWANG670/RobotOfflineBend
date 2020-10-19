@@ -383,7 +383,7 @@
              <string notr="true">border:none;</string>
             </property>
             <property name="text">
-             <string>代码管理</string>
+             <string>数据库管理</string>
             </property>
             <property name="icon">
              <iconset resource="resource.qrc">

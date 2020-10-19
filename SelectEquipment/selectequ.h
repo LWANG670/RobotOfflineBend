@@ -47,7 +47,13 @@ private slots:
     void btnFlipClick();
     void btnUpClick();
     void btnDownClick();
-    void btnSelectClick();
+
+    void btnMachineSelectClick();
+    void btnRobotSelectClick();
+    void btnCenterSelectClick();
+    void btnFlipSelectClick();
+    void btnUpSelectClick();
+    void btnDownSelectClick();
     
 };
 

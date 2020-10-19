@@ -80,6 +80,7 @@ void MainWindow::on_btnDiaplay_clicked()
     ui->widget_6->setStyleSheet("background-color: rgb(255,235,205);");
 }
 
+//数据库管理
 void MainWindow::on_btnProg_clicked()
 {
     hideparentwidgets();
