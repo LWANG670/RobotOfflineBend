@@ -22,7 +22,7 @@ class Ui_FileShower
 public:
     QHBoxLayout *horizontalLayout;
     QWidget *widget;
-    QPushButton *pushButton;
+    QPushButton *btnShow;
 
     void setupUi(QWidget *FileShower)
     {
@@ -36,9 +36,9 @@ public:
         widget = new QWidget(FileShower);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setStyleSheet(QString::fromUtf8("background-color: rgb(214, 214, 214);"));
-        pushButton = new QPushButton(widget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(80, 120, 201, 28));
+        btnShow = new QPushButton(widget);
+        btnShow->setObjectName(QString::fromUtf8("btnShow"));
+        btnShow->setGeometry(QRect(80, 120, 201, 28));
 
         horizontalLayout->addWidget(widget);
 
@@ -51,7 +51,7 @@ public:
     void retranslateUi(QWidget *FileShower)
     {
         FileShower->setWindowTitle(QCoreApplication::translate("FileShower", "Form", nullptr));
-        pushButton->setText(QCoreApplication::translate("FileShower", "\346\226\207\344\273\266\345\261\225\347\244\272\347\225\214\351\235\242", nullptr));
+        btnShow->setText(QCoreApplication::translate("FileShower", "\346\226\207\344\273\266\345\261\225\347\244\272\347\225\214\351\235\242", nullptr));
     } // retranslateUi
 
 };

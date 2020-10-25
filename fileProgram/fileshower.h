@@ -19,6 +19,9 @@ public:
 
 private:
     Ui::FileShower *ui;
+
+private slots:
+    void btnShowClicked();
 };
 
 #endif // FILESHOWER_H

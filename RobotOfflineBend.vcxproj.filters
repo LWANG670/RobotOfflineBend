@@ -56,9 +56,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="fileProgram\bendsurfacedata.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="globalvars.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -86,14 +83,14 @@
     <ClCompile Include="BendFileReader.cpp">
       <Filter>Dialog</Filter>
     </ClCompile>
-    <ClCompile Include="DBHelper.cpp">
+    <ClCompile Include="XMLReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBShower.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="fileProgram\bendsurfacedata.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="globalvars.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -113,6 +110,12 @@
       <Filter>coin3d</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XMLReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -140,7 +143,7 @@
     <QtUic Include="BendFileReader.ui">
       <Filter>Dialog</Filter>
     </QtUic>
-    <QtUic Include="DBHelper.ui">
+    <QtUic Include="DBShower.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -201,7 +204,7 @@
     <QtMoc Include="BendFileReader.h">
       <Filter>Dialog</Filter>
     </QtMoc>
-    <QtMoc Include="DBHelper.h">
+    <QtMoc Include="DBShower.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

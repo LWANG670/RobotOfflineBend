@@ -60,6 +60,16 @@ void SelectEqu::resizeWindow(int width, int height)
     this->setGeometry(0,0,width,height);
 }
 
+void SelectEqu::initChooseWidget()
+{
+	ui->btnMachine->setStyleSheet("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;");
+	ui->btnRobot->setStyleSheet("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;");
+	ui->btnCenter->setStyleSheet("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;");
+	ui->btnFlip->setStyleSheet("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;");
+	ui->btnUp->setStyleSheet("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;");
+	ui->btnDown->setStyleSheet("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;");
+}
+
 void SelectEqu::selectChange(QByteArray selectname)
 {
 
@@ -69,15 +79,17 @@ void SelectEqu::selectChange(QByteArray selectname)
 void SelectEqu::btnMachineClick()
 {
 	ui->stackedWidget->setCurrentIndex(0);
+	initChooseWidget();
+	ui->btnMachine->setStyleSheet("background-color: rgb(255,235,205);border: 3px solid;border-radius: 20px;");
 	ui->labShow->setText(QString::fromLocal8Bit("折弯机"));
 	selectChange("折弯机");
 }
 
-
-
 void SelectEqu::btnRobotClick()
 {
 	ui->stackedWidget->setCurrentIndex(1);
+	initChooseWidget();
+	ui->btnRobot->setStyleSheet("background-color: rgb(255,235,205);border: 3px solid;border-radius: 20px;");
 	ui->labShow->setText(QString::fromLocal8Bit("机器人"));
 	selectChange("机器人");
 }
@@ -85,21 +97,24 @@ void SelectEqu::btnRobotClick()
 void SelectEqu::btnCenterClick()
 {
 	ui->stackedWidget->setCurrentIndex(2);
-	ui->labShow->setText(QString::fromLocal8Bit("对中台"));
+	initChooseWidget();
+	ui->btnCenter->setStyleSheet("background-color: rgb(255,235,205);border: 3px solid;border-radius: 20px;");
 	selectChange("对中台");
 }
 
 void SelectEqu::btnFlipClick()
 {
 	ui->stackedWidget->setCurrentIndex(3);
-	ui->labShow->setText(QString::fromLocal8Bit("翻面架"));
+	initChooseWidget();
+	ui->btnFlip->setStyleSheet("background-color: rgb(255,235,205);border: 3px solid;border-radius: 20px;");
 	selectChange("翻面架");
 }
 
 void SelectEqu::btnUpClick()
 {
 	ui->stackedWidget->setCurrentIndex(4);
-	ui->labShow->setText(QString::fromLocal8Bit("上料台"));
+	initChooseWidget();
+	ui->btnUp->setStyleSheet("background-color: rgb(255,235,205);border: 3px solid;border-radius: 20px;");
 	selectChange("上料台");
 
 }
@@ -107,7 +122,8 @@ void SelectEqu::btnUpClick()
 void SelectEqu::btnDownClick()
 {
 	ui->stackedWidget->setCurrentIndex(5);
-	ui->labShow->setText(QString::fromLocal8Bit("下料台"));
+	initChooseWidget();
+	ui->btnDown->setStyleSheet("background-color: rgb(255,235,205);border: 3px solid;border-radius: 20px;");
 	selectChange("下料台");
 }
 

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1103</width>
-    <height>532</height>
+    <width>1092</width>
+    <height>728</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -53,9 +53,9 @@
          <enum>Qt::LeftToRight</enum>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1,1,1,1,1,2">
+        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1,1,1,1,1,1">
          <property name="spacing">
           <number>20</number>
          </property>
@@ -99,7 +99,7 @@
            </property>
            <property name="icon">
             <iconset resource="../resource.qrc">
-             <normaloff>:/img/Machine.png</normaloff>:/img/Machine.png</iconset>
+             <normaloff>:/img/machine.ico</normaloff>:/img/machine.ico</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -137,7 +137,7 @@
            </property>
            <property name="icon">
             <iconset resource="../resource.qrc">
-             <normaloff>:/img/Robot.ico</normaloff>:/img/Robot.ico</iconset>
+             <normaloff>:/img/robot2.ico</normaloff>:/img/robot2.ico</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -175,7 +175,7 @@
            </property>
            <property name="icon">
             <iconset resource="../resource.qrc">
-             <normaloff>:/img/Center.ico</normaloff>:/img/Center.ico</iconset>
+             <normaloff>:/img/center2.ico</normaloff>:/img/center2.ico</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -216,7 +216,7 @@
            </property>
            <property name="icon">
             <iconset resource="../resource.qrc">
-             <normaloff>:/img/Machine.png</normaloff>:/img/Machine.png</iconset>
+             <normaloff>:/img/flip2.ico</normaloff>:/img/flip2.ico</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -254,7 +254,7 @@
            </property>
            <property name="icon">
             <iconset resource="../resource.qrc">
-             <normaloff>:/img/Machine.png</normaloff>:/img/Machine.png</iconset>
+             <normaloff>:/img/Up.ico</normaloff>:/img/Up.ico</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -292,7 +292,7 @@
            </property>
            <property name="icon">
             <iconset resource="../resource.qrc">
-             <normaloff>:/img/Machine.png</normaloff>:/img/Machine.png</iconset>
+             <normaloff>:/img/Down.ico</normaloff>:/img/Down.ico</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -306,7 +306,17 @@
           </widget>
          </item>
          <item>
-          <widget class="QWidget" name="widget_2" native="true"/>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </widget>
@@ -336,7 +346,7 @@
          <item>
           <widget class="QStackedWidget" name="stackedWidget">
            <property name="currentIndex">
-            <number>0</number>
+            <number>5</number>
            </property>
            <widget class="QWidget" name="page">
             <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -406,7 +416,7 @@
                  </layout>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1">
+                 <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0">
                   <item>
                    <spacer name="horizontalSpacer">
                     <property name="orientation">
@@ -421,7 +431,13 @@
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="btnMachineSelect">
+                   <widget class="QToolButton" name="btnMachineSelect">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="font">
                      <font>
                       <family>楷体</family>
@@ -429,11 +445,23 @@
                      </font>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;
-</string>
+                     <string notr="true">background-color: rgb(227, 227, 227);</string>
                     </property>
                     <property name="text">
                      <string>数据库选取</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resource.qrc">
+                      <normaloff>:/img/datashow.ico</normaloff>:/img/datashow.ico</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>30</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="toolButtonStyle">
+                     <enum>Qt::ToolButtonTextBesideIcon</enum>
                     </property>
                    </widget>
                   </item>
@@ -609,7 +637,7 @@
                  </layout>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="1,1">
+                 <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="1,0">
                   <item>
                    <spacer name="horizontalSpacer_2">
                     <property name="orientation">
@@ -624,7 +652,13 @@
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="btnRobotSelect">
+                   <widget class="QToolButton" name="btnRobotSelect">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="font">
                      <font>
                       <family>楷体</family>
@@ -632,11 +666,23 @@
                      </font>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;
-</string>
+                     <string notr="true">background-color: rgb(227, 227, 227);</string>
                     </property>
                     <property name="text">
                      <string>数据库选取</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resource.qrc">
+                      <normaloff>:/img/datashow.ico</normaloff>:/img/datashow.ico</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>30</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="toolButtonStyle">
+                     <enum>Qt::ToolButtonTextBesideIcon</enum>
                     </property>
                    </widget>
                   </item>
@@ -812,7 +858,7 @@
                  </layout>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="1,1">
+                 <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="1,0">
                   <item>
                    <spacer name="horizontalSpacer_3">
                     <property name="orientation">
@@ -827,7 +873,13 @@
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="btnCenterSelect">
+                   <widget class="QToolButton" name="btnCenterSelect">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="font">
                      <font>
                       <family>楷体</family>
@@ -835,11 +887,24 @@
                      </font>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;
+                     <string notr="true">background-color: rgb(227, 227, 227);
 </string>
                     </property>
                     <property name="text">
                      <string>数据库选取</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resource.qrc">
+                      <normaloff>:/img/datashow.ico</normaloff>:/img/datashow.ico</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>30</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="toolButtonStyle">
+                     <enum>Qt::ToolButtonTextBesideIcon</enum>
                     </property>
                    </widget>
                   </item>
@@ -1015,7 +1080,7 @@
                  </layout>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_23" stretch="1,1">
+                 <layout class="QHBoxLayout" name="horizontalLayout_23" stretch="1,0">
                   <item>
                    <spacer name="horizontalSpacer_4">
                     <property name="orientation">
@@ -1030,7 +1095,13 @@
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="btnFlipSelect">
+                   <widget class="QToolButton" name="btnFlipSelect">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="font">
                      <font>
                       <family>楷体</family>
@@ -1038,11 +1109,24 @@
                      </font>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;
+                     <string notr="true">background-color: rgb(227, 227, 227);
 </string>
                     </property>
                     <property name="text">
                      <string>数据库选取</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resource.qrc">
+                      <normaloff>:/img/datashow.ico</normaloff>:/img/datashow.ico</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>30</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="toolButtonStyle">
+                     <enum>Qt::ToolButtonTextBesideIcon</enum>
                     </property>
                    </widget>
                   </item>
@@ -1218,7 +1302,7 @@
                  </layout>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_29" stretch="1,1">
+                 <layout class="QHBoxLayout" name="horizontalLayout_29" stretch="1,0">
                   <item>
                    <spacer name="horizontalSpacer_5">
                     <property name="orientation">
@@ -1233,7 +1317,13 @@
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="btnUpSelect">
+                   <widget class="QToolButton" name="btnUpSelect">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="font">
                      <font>
                       <family>楷体</family>
@@ -1241,11 +1331,23 @@
                      </font>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;
-</string>
+                     <string notr="true">background-color: rgb(227, 227, 227);</string>
                     </property>
                     <property name="text">
                      <string>数据库选取</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resource.qrc">
+                      <normaloff>:/img/datashow.ico</normaloff>:/img/datashow.ico</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>30</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="toolButtonStyle">
+                     <enum>Qt::ToolButtonTextBesideIcon</enum>
                     </property>
                    </widget>
                   </item>
@@ -1421,7 +1523,7 @@
                  </layout>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_35" stretch="1,1">
+                 <layout class="QHBoxLayout" name="horizontalLayout_35" stretch="1,0">
                   <item>
                    <spacer name="horizontalSpacer_6">
                     <property name="orientation">
@@ -1436,7 +1538,13 @@
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="btnDownSelect">
+                   <widget class="QToolButton" name="btnDownSelect">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="font">
                      <font>
                       <family>楷体</family>
@@ -1444,11 +1552,23 @@
                      </font>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;
-</string>
+                     <string notr="true">background-color: rgb(227, 227, 227);</string>
                     </property>
                     <property name="text">
                      <string>数据库选取</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resource.qrc">
+                      <normaloff>:/img/datashow.ico</normaloff>:/img/datashow.ico</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>30</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="toolButtonStyle">
+                     <enum>Qt::ToolButtonTextBesideIcon</enum>
                     </property>
                    </widget>
                   </item>

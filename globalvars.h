@@ -4,8 +4,6 @@
 #include <QMap>
 
 
-extern QString g_filePath;
-
 struct MyPoint
 {
 	float px;
@@ -44,5 +42,23 @@ struct BendData
 	QMap<int, BendSurfaceData> Surfaces;
 	QMap<int, BendLineData> Bendlines;
 };
+
+struct Workpiecepos
+{
+	float xPos=0;
+	float yPos=0;
+	float zAngle=0;
+};
+
+//保存设置好的数据信息
+struct WorkpieceData
+{
+	QString workpeicename[6];
+	Workpiecepos workpeicepos[6];
+};
+
+
+extern QString g_filePath;
+extern WorkpieceData g_workpiecedata;
 
 #endif // GLOBALVARS_H

@@ -37,6 +37,8 @@ private:
     // Viewer
     SoQtExaminerViewer* simulatorView;
 
+    void initChooseWidget();
+
     //Ë½ÓÐº¯Êý
     void selectChange(QByteArray selectname);
 
@@ -54,7 +56,6 @@ private slots:
     void btnFlipSelectClick();
     void btnUpSelectClick();
     void btnDownSelectClick();
-    
 };
 
 #endif // SELECTEQU_H

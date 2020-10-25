@@ -110,7 +110,7 @@ public:
         actionT->setObjectName(QString::fromUtf8("actionT"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        centralwidget->setStyleSheet(QString::fromUtf8("background-color: rgb(229, 229, 229);"));
+        centralwidget->setStyleSheet(QString::fromUtf8(""));
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setSpacing(7);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
@@ -346,7 +346,7 @@ public:
         QFont font2;
         font2.setPointSize(6);
         childwidget->setFont(font2);
-        childwidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        childwidget->setStyleSheet(QString::fromUtf8(""));
 
         verticalLayout->addWidget(childwidget);
 
@@ -416,7 +416,7 @@ public:
         btnSelect->setText(QCoreApplication::translate("MainWindow", "\350\256\276\345\244\207\351\200\211\345\236\213", nullptr));
         btnSetting->setText(QCoreApplication::translate("MainWindow", "\345\267\245\350\211\272\350\247\204\345\210\222", nullptr));
         btnDiaplay->setText(QCoreApplication::translate("MainWindow", "\344\270\211\347\273\264\345\261\225\347\244\272", nullptr));
-        btnProg->setText(QCoreApplication::translate("MainWindow", "\344\273\243\347\240\201\347\256\241\347\220\206", nullptr));
+        btnProg->setText(QCoreApplication::translate("MainWindow", "\346\225\260\346\215\256\345\272\223\347\256\241\347\220\206", nullptr));
         btnShow->setText(QCoreApplication::translate("MainWindow", "\345\267\245\344\273\266\346\230\276\347\244\272", nullptr));
         labFilename->setText(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266\345\220\215\357\274\232", nullptr));
         menu_F->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266(&F)", nullptr));

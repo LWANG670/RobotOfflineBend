@@ -34,7 +34,7 @@
      <property name="styleSheet">
       <string notr="true">background-color: rgb(214, 214, 214);</string>
      </property>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="btnShow">
       <property name="geometry">
        <rect>
         <x>80</x>

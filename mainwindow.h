@@ -7,6 +7,7 @@
 #include"fileProgram/fileshower.h"
 #include<QFileDialog>
 #include<QTimer>
+#include "DBShower.h"
 #include"globalvars.h"
 
 QT_BEGIN_NAMESPACE
@@ -44,14 +45,17 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    SelectEqu *pSelectWidget;
-    FileShower *pShowerWidget;
+    SelectEqu *pSelectWidget;//设备选取界面
+    FileShower *pShowerWidget;//工件显示界面
+    DBShower* pDBWidget;//数据库管理界面
     //QString filename;
 
     //私有数据
     BendData bendDate;
 
     QGraphicsDropShadowEffect *shadow;//阴影效果
+
+    void resizeEvent(QResizeEvent* event);
 
 };
 #endif // MAINWINDOW_H

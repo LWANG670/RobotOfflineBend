@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items id="1">
+    <item src="&amp;lt;&amp;gt;" dst="&lt;>"/>
+    <item src="&amp;quot;&amp;apos;&amp;amp;" dst="&quot;'&amp;"/>
+    <item src="test" dst="1234"/>
+</items>

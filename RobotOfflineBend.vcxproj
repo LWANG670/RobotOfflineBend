@@ -205,23 +205,24 @@
     <ClCompile Include="Coin3d\QtCoin3D_Robot.cpp" />
     <ClCompile Include="Coin3d\Robot.cpp" />
     <ClCompile Include="Coin3d\SoDHTransform.cpp" />
-    <ClCompile Include="DBHelper.cpp" />
-    <ClCompile Include="fileProgram\bendsurfacedata.cpp" />
+    <ClCompile Include="DBShower.cpp" />
     <ClCompile Include="fileProgram\fileshower.cpp" />
     <ClCompile Include="globalvars.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainwindow.cpp" />
     <ClCompile Include="SelectEquipment\selectequ.cpp" />
+    <ClCompile Include="XMLReader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="DBHelper.h" />
+    <QtMoc Include="DBShower.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="XMLReader.h" />
     <ClInclude Include="resource.h" />
     <QtMoc Include="Coin3d\QtCoin3D_Robot.h" />
     <QtMoc Include="BendFileReader.h" />
     <ClInclude Include="Coin3d\Robot.h" />
     <ClInclude Include="Coin3d\SoDHTransform.h" />
     <ClInclude Include="Coin3d\ui_QtCoin3D_Robot.h" />
-    <ClInclude Include="fileProgram\bendsurfacedata.h" />
     <QtMoc Include="fileProgram\fileshower.h">
     </QtMoc>
     <ClInclude Include="globalvars.h" />
@@ -251,7 +252,7 @@
   <ItemGroup>
     <QtUic Include="BendFileReader.ui" />
     <QtUic Include="Coin3d\QtCoin3D_Robot.ui" />
-    <QtUic Include="DBHelper.ui" />
+    <QtUic Include="DBShower.ui" />
     <QtUic Include="fileProgram\fileshower.ui">
     </QtUic>
     <QtUic Include="mainwindow.ui">

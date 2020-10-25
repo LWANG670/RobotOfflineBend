@@ -15,7 +15,6 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QToolButton>
@@ -38,7 +37,7 @@ public:
     QToolButton *btnFlip;
     QToolButton *btnUp;
     QToolButton *btnDown;
-    QWidget *widget_2;
+    QSpacerItem *verticalSpacer;
     QWidget *widget_3;
     QWidget *widget_4;
     QVBoxLayout *verticalLayout;
@@ -54,7 +53,7 @@ public:
     QLineEdit *lineName;
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer;
-    QPushButton *btnMachineSelect;
+    QToolButton *btnMachineSelect;
     QHBoxLayout *horizontalLayout_5;
     QLabel *labXpos;
     QLineEdit *lineXpos;
@@ -76,7 +75,7 @@ public:
     QLineEdit *lineName_2;
     QHBoxLayout *horizontalLayout_9;
     QSpacerItem *horizontalSpacer_2;
-    QPushButton *btnRobotSelect;
+    QToolButton *btnRobotSelect;
     QHBoxLayout *horizontalLayout_12;
     QLabel *labXpos_2;
     QLineEdit *lineXpos_2;
@@ -98,7 +97,7 @@ public:
     QLineEdit *lineName_3;
     QHBoxLayout *horizontalLayout_17;
     QSpacerItem *horizontalSpacer_3;
-    QPushButton *btnCenterSelect;
+    QToolButton *btnCenterSelect;
     QHBoxLayout *horizontalLayout_18;
     QLabel *labXpos_3;
     QLineEdit *lineXpos_3;
@@ -120,7 +119,7 @@ public:
     QLineEdit *lineName_4;
     QHBoxLayout *horizontalLayout_23;
     QSpacerItem *horizontalSpacer_4;
-    QPushButton *btnFlipSelect;
+    QToolButton *btnFlipSelect;
     QHBoxLayout *horizontalLayout_24;
     QLabel *labXpos_4;
     QLineEdit *lineXpos_4;
@@ -142,7 +141,7 @@ public:
     QLineEdit *lineName_5;
     QHBoxLayout *horizontalLayout_29;
     QSpacerItem *horizontalSpacer_5;
-    QPushButton *btnUpSelect;
+    QToolButton *btnUpSelect;
     QHBoxLayout *horizontalLayout_30;
     QLabel *labXpos_5;
     QLineEdit *lineXpos_5;
@@ -164,7 +163,7 @@ public:
     QLineEdit *lineName_6;
     QHBoxLayout *horizontalLayout_35;
     QSpacerItem *horizontalSpacer_6;
-    QPushButton *btnDownSelect;
+    QToolButton *btnDownSelect;
     QHBoxLayout *horizontalLayout_36;
     QLabel *labXpos_6;
     QLineEdit *lineXpos_6;
@@ -180,7 +179,7 @@ public:
     {
         if (SelectEqu->objectName().isEmpty())
             SelectEqu->setObjectName(QString::fromUtf8("SelectEqu"));
-        SelectEqu->resize(1103, 532);
+        SelectEqu->resize(1092, 728);
         verticalLayout_4 = new QVBoxLayout(SelectEqu);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -194,7 +193,7 @@ public:
         widget_choose = new QWidget(widget);
         widget_choose->setObjectName(QString::fromUtf8("widget_choose"));
         widget_choose->setLayoutDirection(Qt::LeftToRight);
-        widget_choose->setStyleSheet(QString::fromUtf8(""));
+        widget_choose->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         verticalLayout_3 = new QVBoxLayout(widget_choose);
         verticalLayout_3->setSpacing(20);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
@@ -216,7 +215,7 @@ public:
         btnMachine->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;\n"
 ""));
         QIcon icon;
-        icon.addFile(QString::fromUtf8(":/img/Machine.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/img/machine.ico"), QSize(), QIcon::Normal, QIcon::Off);
         btnMachine->setIcon(icon);
         btnMachine->setIconSize(QSize(60, 60));
         btnMachine->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
@@ -231,7 +230,7 @@ public:
         btnRobot->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;\n"
 ""));
         QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/img/Robot.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QString::fromUtf8(":/img/robot2.ico"), QSize(), QIcon::Normal, QIcon::Off);
         btnRobot->setIcon(icon1);
         btnRobot->setIconSize(QSize(60, 60));
         btnRobot->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
@@ -246,7 +245,7 @@ public:
         btnCenter->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;\n"
 ""));
         QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/img/Center.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QString::fromUtf8(":/img/center2.ico"), QSize(), QIcon::Normal, QIcon::Off);
         btnCenter->setIcon(icon2);
         btnCenter->setIconSize(QSize(60, 60));
         btnCenter->setPopupMode(QToolButton::DelayedPopup);
@@ -261,7 +260,9 @@ public:
         btnFlip->setFont(font);
         btnFlip->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;\n"
 ""));
-        btnFlip->setIcon(icon);
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/img/flip2.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        btnFlip->setIcon(icon3);
         btnFlip->setIconSize(QSize(60, 60));
         btnFlip->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
@@ -274,7 +275,9 @@ public:
         btnUp->setFont(font);
         btnUp->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;\n"
 ""));
-        btnUp->setIcon(icon);
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/img/Up.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        btnUp->setIcon(icon4);
         btnUp->setIconSize(QSize(60, 60));
         btnUp->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
@@ -287,16 +290,17 @@ public:
         btnDown->setFont(font);
         btnDown->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;\n"
 ""));
-        btnDown->setIcon(icon);
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/img/Down.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        btnDown->setIcon(icon5);
         btnDown->setIconSize(QSize(60, 60));
         btnDown->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
         verticalLayout_3->addWidget(btnDown);
 
-        widget_2 = new QWidget(widget_choose);
-        widget_2->setObjectName(QString::fromUtf8("widget_2"));
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_3->addWidget(widget_2);
+        verticalLayout_3->addItem(verticalSpacer);
 
         verticalLayout_3->setStretch(0, 1);
         verticalLayout_3->setStretch(1, 1);
@@ -304,7 +308,7 @@ public:
         verticalLayout_3->setStretch(3, 1);
         verticalLayout_3->setStretch(4, 1);
         verticalLayout_3->setStretch(5, 1);
-        verticalLayout_3->setStretch(6, 2);
+        verticalLayout_3->setStretch(6, 1);
 
         horizontalLayout_2->addWidget(widget_choose);
 
@@ -375,16 +379,21 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer);
 
-        btnMachineSelect = new QPushButton(widget_5);
+        btnMachineSelect = new QToolButton(widget_5);
         btnMachineSelect->setObjectName(QString::fromUtf8("btnMachineSelect"));
+        sizePolicy.setHeightForWidth(btnMachineSelect->sizePolicy().hasHeightForWidth());
+        btnMachineSelect->setSizePolicy(sizePolicy);
         btnMachineSelect->setFont(font2);
-        btnMachineSelect->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;\n"
-""));
+        btnMachineSelect->setStyleSheet(QString::fromUtf8("background-color: rgb(227, 227, 227);"));
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/img/datashow.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        btnMachineSelect->setIcon(icon6);
+        btnMachineSelect->setIconSize(QSize(30, 30));
+        btnMachineSelect->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
         horizontalLayout_4->addWidget(btnMachineSelect);
 
         horizontalLayout_4->setStretch(0, 1);
-        horizontalLayout_4->setStretch(1, 1);
 
         verticalLayout_2->addLayout(horizontalLayout_4);
 
@@ -499,16 +508,19 @@ public:
 
         horizontalLayout_9->addItem(horizontalSpacer_2);
 
-        btnRobotSelect = new QPushButton(widget_6);
+        btnRobotSelect = new QToolButton(widget_6);
         btnRobotSelect->setObjectName(QString::fromUtf8("btnRobotSelect"));
+        sizePolicy.setHeightForWidth(btnRobotSelect->sizePolicy().hasHeightForWidth());
+        btnRobotSelect->setSizePolicy(sizePolicy);
         btnRobotSelect->setFont(font2);
-        btnRobotSelect->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;\n"
-""));
+        btnRobotSelect->setStyleSheet(QString::fromUtf8("background-color: rgb(227, 227, 227);"));
+        btnRobotSelect->setIcon(icon6);
+        btnRobotSelect->setIconSize(QSize(30, 30));
+        btnRobotSelect->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
         horizontalLayout_9->addWidget(btnRobotSelect);
 
         horizontalLayout_9->setStretch(0, 1);
-        horizontalLayout_9->setStretch(1, 1);
 
         verticalLayout_6->addLayout(horizontalLayout_9);
 
@@ -623,16 +635,20 @@ public:
 
         horizontalLayout_17->addItem(horizontalSpacer_3);
 
-        btnCenterSelect = new QPushButton(widget_7);
+        btnCenterSelect = new QToolButton(widget_7);
         btnCenterSelect->setObjectName(QString::fromUtf8("btnCenterSelect"));
+        sizePolicy.setHeightForWidth(btnCenterSelect->sizePolicy().hasHeightForWidth());
+        btnCenterSelect->setSizePolicy(sizePolicy);
         btnCenterSelect->setFont(font2);
-        btnCenterSelect->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;\n"
+        btnCenterSelect->setStyleSheet(QString::fromUtf8("background-color: rgb(227, 227, 227);\n"
 ""));
+        btnCenterSelect->setIcon(icon6);
+        btnCenterSelect->setIconSize(QSize(30, 30));
+        btnCenterSelect->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
         horizontalLayout_17->addWidget(btnCenterSelect);
 
         horizontalLayout_17->setStretch(0, 1);
-        horizontalLayout_17->setStretch(1, 1);
 
         verticalLayout_8->addLayout(horizontalLayout_17);
 
@@ -747,16 +763,20 @@ public:
 
         horizontalLayout_23->addItem(horizontalSpacer_4);
 
-        btnFlipSelect = new QPushButton(widget_8);
+        btnFlipSelect = new QToolButton(widget_8);
         btnFlipSelect->setObjectName(QString::fromUtf8("btnFlipSelect"));
+        sizePolicy.setHeightForWidth(btnFlipSelect->sizePolicy().hasHeightForWidth());
+        btnFlipSelect->setSizePolicy(sizePolicy);
         btnFlipSelect->setFont(font2);
-        btnFlipSelect->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;\n"
+        btnFlipSelect->setStyleSheet(QString::fromUtf8("background-color: rgb(227, 227, 227);\n"
 ""));
+        btnFlipSelect->setIcon(icon6);
+        btnFlipSelect->setIconSize(QSize(30, 30));
+        btnFlipSelect->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
         horizontalLayout_23->addWidget(btnFlipSelect);
 
         horizontalLayout_23->setStretch(0, 1);
-        horizontalLayout_23->setStretch(1, 1);
 
         verticalLayout_10->addLayout(horizontalLayout_23);
 
@@ -871,16 +891,19 @@ public:
 
         horizontalLayout_29->addItem(horizontalSpacer_5);
 
-        btnUpSelect = new QPushButton(widget_9);
+        btnUpSelect = new QToolButton(widget_9);
         btnUpSelect->setObjectName(QString::fromUtf8("btnUpSelect"));
+        sizePolicy.setHeightForWidth(btnUpSelect->sizePolicy().hasHeightForWidth());
+        btnUpSelect->setSizePolicy(sizePolicy);
         btnUpSelect->setFont(font2);
-        btnUpSelect->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;\n"
-""));
+        btnUpSelect->setStyleSheet(QString::fromUtf8("background-color: rgb(227, 227, 227);"));
+        btnUpSelect->setIcon(icon6);
+        btnUpSelect->setIconSize(QSize(30, 30));
+        btnUpSelect->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
         horizontalLayout_29->addWidget(btnUpSelect);
 
         horizontalLayout_29->setStretch(0, 1);
-        horizontalLayout_29->setStretch(1, 1);
 
         verticalLayout_12->addLayout(horizontalLayout_29);
 
@@ -995,16 +1018,19 @@ public:
 
         horizontalLayout_35->addItem(horizontalSpacer_6);
 
-        btnDownSelect = new QPushButton(widget_10);
+        btnDownSelect = new QToolButton(widget_10);
         btnDownSelect->setObjectName(QString::fromUtf8("btnDownSelect"));
+        sizePolicy.setHeightForWidth(btnDownSelect->sizePolicy().hasHeightForWidth());
+        btnDownSelect->setSizePolicy(sizePolicy);
         btnDownSelect->setFont(font2);
-        btnDownSelect->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 255, 231);border: 1px solid;border-radius: 20px;\n"
-""));
+        btnDownSelect->setStyleSheet(QString::fromUtf8("background-color: rgb(227, 227, 227);"));
+        btnDownSelect->setIcon(icon6);
+        btnDownSelect->setIconSize(QSize(30, 30));
+        btnDownSelect->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
         horizontalLayout_35->addWidget(btnDownSelect);
 
         horizontalLayout_35->setStretch(0, 1);
-        horizontalLayout_35->setStretch(1, 1);
 
         verticalLayout_14->addLayout(horizontalLayout_35);
 
@@ -1086,7 +1112,7 @@ public:
 
         retranslateUi(SelectEqu);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(SelectEqu);
