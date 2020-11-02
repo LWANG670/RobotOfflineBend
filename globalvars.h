@@ -1,14 +1,18 @@
-#ifndef GLOBALVARS_H
+Ôªø#ifndef GLOBALVARS_H
 #define GLOBALVARS_H
 #include <QString>
 #include <QMap>
 
+//ËÆæÁΩÆ‰∏≠Êñá
+#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
 
 struct MyPoint
 {
 	float px;
 	float py;
-	MyPoint(){}
+	MyPoint() {}
 	MyPoint(float x, float y)
 	{
 		px = x;
@@ -18,47 +22,118 @@ struct MyPoint
 
 struct BendSurfaceData
 {
-	QVector<MyPoint> OutLines;
+	QVector<MyPoint> outLines;
 
 	BendSurfaceData() {}
 	BendSurfaceData(QVector<MyPoint> outlines)
 	{
-		OutLines = outlines;
+		outLines = outlines;
 	}
-	//ƒ⁄≤ø∆‰À˚µ„
+	//ÂÜÖÈÉ®ÂÖ∂‰ªñÁÇπ
 };
 
 struct BendLineData
 {
-	MyPoint StartPoint;
-	MyPoint EndPoint;
-	float BendAngle;
-	float BendRadius;
+	MyPoint startPoint;
+	MyPoint endPoint;
+	float bendAngle;
+	float bendRadius;
 };
 
 struct BendData
 {
-	float Thickeness;
-	QMap<int, BendSurfaceData> Surfaces;
-	QMap<int, BendLineData> Bendlines;
+	float thickeness;
+	QMap<int, BendSurfaceData> surfaces;
+	QMap<int, BendLineData> bendlines;
 };
 
-struct Workpiecepos
+struct WorkpieceBasicInfo
 {
-	float xPos=0;
-	float yPos=0;
-	float zAngle=0;
+	float xPos = 0;
+	float yPos = 0;
+	float zAngle = 0;
+	QString workpieceName;
+	QString workpiecePath;
+	enum WorkpieceType
+	{
+		Machine, Robot, Center, Flip, Up, Down
+	};
 };
 
-//±£¥Ê…Ë÷√∫√µƒ ˝æ›–≈œ¢
-struct WorkpieceData
+//ÂÖ≠‰∏™Êú∫Âô®‰ø°ÊÅØ
+struct WorkpieceMachine
 {
-	QString workpeicename[6];
-	Workpiecepos workpeicepos[6];
+	WorkpieceBasicInfo basicInfo;
+	QString data1 = "";
+	QString data2 = "";
+	QString data3 = "";
+	QString data4 = "";
 };
 
+struct WorkpieceRobot
+{
+	WorkpieceBasicInfo basicInfo;
+	QString data1 = "";
+	QString data2 = "";
+	QString data3 = "";
+	QString data4 = "";
+};
+
+struct WorkpieceCenter
+{
+	WorkpieceBasicInfo basicInfo;
+	QString data1 = "";
+	QString data2 = "";
+	QString data3 = "";
+	QString data4 = "";
+};
+
+struct WorkpieceFlip
+{
+	WorkpieceBasicInfo basicInfo;
+	QString data1 = "";
+	QString data2 = "";
+	QString data3 = "";
+	QString data4 = "";
+};
+
+struct WorkpieceUp
+{
+	WorkpieceBasicInfo basicInfo;
+	QString data1 = "";
+	QString data2 = "";
+	QString data3 = "";
+	QString data4 = "";
+};
+
+struct WorkpieceDown
+{
+	WorkpieceBasicInfo basicInfo;
+	QString data1 = "";
+	QString data2 = "";
+	QString data3 = "";
+	QString data4 = "";
+};
+
+struct Workpieces
+{
+	WorkpieceMachine machine;
+	WorkpieceRobot robot;
+	WorkpieceFlip flip;
+	WorkpieceCenter center;
+	WorkpieceUp up;
+	WorkpieceDown down;
+};
+
+struct TotalData
+{
+	BendData totalBendData;
+	Workpieces totalWorkpiece;
+
+};
 
 extern QString g_filePath;
-extern WorkpieceData g_workpiecedata;
+extern TotalData g_totalData;
 
-#endif // GLOBALVARS_H
+
+#endif // GLOBALVARS

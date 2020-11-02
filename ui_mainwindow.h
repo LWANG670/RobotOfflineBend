@@ -18,7 +18,9 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QSplitter>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QToolButton>
 #include <QtWidgets/QVBoxLayout>
@@ -34,9 +36,10 @@ public:
     QAction *action;
     QAction *action_up;
     QAction *action_down;
-    QAction *actionT;
+    QAction *action_showMenu;
     QWidget *centralwidget;
-    QVBoxLayout *verticalLayout;
+    QVBoxLayout *verticalLayout_2;
+    QSplitter *splitter;
     QWidget *widget;
     QHBoxLayout *horizontalLayout;
     QWidget *widget_3;
@@ -58,11 +61,14 @@ public:
     QHBoxLayout *horizontalLayout_8;
     QToolButton *btnShow;
     QWidget *widget_9;
+    QWidget *widget_2;
+    QVBoxLayout *verticalLayout;
     QWidget *widget_data;
     QHBoxLayout *horizontalLayout_6;
     QSpacerItem *horizontalSpacer_2;
     QLabel *labFilename;
     QSpacerItem *horizontalSpacer;
+    QPushButton *btnShowMenu;
     QWidget *childwidget;
     QMenuBar *menuBar;
     QMenu *menu_F;
@@ -75,7 +81,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(1200, 800);
-        QSizePolicy sizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
+        QSizePolicy sizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
@@ -106,16 +112,21 @@ public:
         QIcon icon4;
         icon4.addFile(QString::fromUtf8(":/img/zoom-out.png"), QSize(), QIcon::Normal, QIcon::Off);
         action_down->setIcon(icon4);
-        actionT = new QAction(MainWindow);
-        actionT->setObjectName(QString::fromUtf8("actionT"));
+        action_showMenu = new QAction(MainWindow);
+        action_showMenu->setObjectName(QString::fromUtf8("action_showMenu"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setStyleSheet(QString::fromUtf8(""));
-        verticalLayout = new QVBoxLayout(centralwidget);
-        verticalLayout->setSpacing(7);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(1, 1, 1, 1);
-        widget = new QWidget(centralwidget);
+        verticalLayout_2 = new QVBoxLayout(centralwidget);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        splitter = new QSplitter(centralwidget);
+        splitter->setObjectName(QString::fromUtf8("splitter"));
+        splitter->setOrientation(Qt::Vertical);
+        splitter->setOpaqueResize(true);
+        splitter->setHandleWidth(2);
+        splitter->setChildrenCollapsible(true);
+        widget = new QWidget(splitter);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setStyleSheet(QString::fromUtf8(""));
         horizontalLayout = new QHBoxLayout(widget);
@@ -132,8 +143,11 @@ public:
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
         btnBend = new QToolButton(widget_3);
         btnBend->setObjectName(QString::fromUtf8("btnBend"));
-        sizePolicy.setHeightForWidth(btnBend->sizePolicy().hasHeightForWidth());
-        btnBend->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy1(QSizePolicy::Maximum, QSizePolicy::Maximum);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(btnBend->sizePolicy().hasHeightForWidth());
+        btnBend->setSizePolicy(sizePolicy1);
         QFont font;
         font.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
         font.setPointSize(9);
@@ -162,8 +176,8 @@ public:
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
         btnSelect = new QToolButton(widget_4);
         btnSelect->setObjectName(QString::fromUtf8("btnSelect"));
-        sizePolicy.setHeightForWidth(btnSelect->sizePolicy().hasHeightForWidth());
-        btnSelect->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(btnSelect->sizePolicy().hasHeightForWidth());
+        btnSelect->setSizePolicy(sizePolicy1);
         btnSelect->setFont(font);
         btnSelect->setContextMenuPolicy(Qt::ActionsContextMenu);
         btnSelect->setStyleSheet(QString::fromUtf8("border:none;"));
@@ -190,8 +204,8 @@ public:
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
         btnSetting = new QToolButton(widget_5);
         btnSetting->setObjectName(QString::fromUtf8("btnSetting"));
-        sizePolicy.setHeightForWidth(btnSetting->sizePolicy().hasHeightForWidth());
-        btnSetting->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(btnSetting->sizePolicy().hasHeightForWidth());
+        btnSetting->setSizePolicy(sizePolicy1);
         btnSetting->setFont(font);
         btnSetting->setContextMenuPolicy(Qt::ActionsContextMenu);
         btnSetting->setStyleSheet(QString::fromUtf8("border:none;"));
@@ -218,8 +232,8 @@ public:
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
         btnDiaplay = new QToolButton(widget_6);
         btnDiaplay->setObjectName(QString::fromUtf8("btnDiaplay"));
-        sizePolicy.setHeightForWidth(btnDiaplay->sizePolicy().hasHeightForWidth());
-        btnDiaplay->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(btnDiaplay->sizePolicy().hasHeightForWidth());
+        btnDiaplay->setSizePolicy(sizePolicy1);
         btnDiaplay->setFont(font);
         btnDiaplay->setContextMenuPolicy(Qt::ActionsContextMenu);
         btnDiaplay->setStyleSheet(QString::fromUtf8("border:none;"));
@@ -246,8 +260,8 @@ public:
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
         btnProg = new QToolButton(widget_7);
         btnProg->setObjectName(QString::fromUtf8("btnProg"));
-        sizePolicy.setHeightForWidth(btnProg->sizePolicy().hasHeightForWidth());
-        btnProg->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(btnProg->sizePolicy().hasHeightForWidth());
+        btnProg->setSizePolicy(sizePolicy1);
         btnProg->setFont(font);
         btnProg->setContextMenuPolicy(Qt::ActionsContextMenu);
         btnProg->setStyleSheet(QString::fromUtf8("border:none;"));
@@ -273,8 +287,8 @@ public:
         horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
         btnShow = new QToolButton(widget_8);
         btnShow->setObjectName(QString::fromUtf8("btnShow"));
-        sizePolicy.setHeightForWidth(btnShow->sizePolicy().hasHeightForWidth());
-        btnShow->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(btnShow->sizePolicy().hasHeightForWidth());
+        btnShow->setSizePolicy(sizePolicy1);
         btnShow->setFont(font);
         btnShow->setContextMenuPolicy(Qt::ActionsContextMenu);
         btnShow->setStyleSheet(QString::fromUtf8("border:none;"));
@@ -303,10 +317,18 @@ public:
         horizontalLayout->setStretch(4, 1);
         horizontalLayout->setStretch(5, 1);
         horizontalLayout->setStretch(6, 6);
-
-        verticalLayout->addWidget(widget);
-
-        widget_data = new QWidget(centralwidget);
+        splitter->addWidget(widget);
+        widget_2 = new QWidget(splitter);
+        widget_2->setObjectName(QString::fromUtf8("widget_2"));
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(widget_2->sizePolicy().hasHeightForWidth());
+        widget_2->setSizePolicy(sizePolicy2);
+        verticalLayout = new QVBoxLayout(widget_2);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        widget_data = new QWidget(widget_2);
         widget_data->setObjectName(QString::fromUtf8("widget_data"));
         widget_data->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.035, y2:0, stop:0.427861 rgba(206, 206, 207, 255), stop:1 rgba(255, 255, 255, 255));"));
         horizontalLayout_6 = new QHBoxLayout(widget_data);
@@ -318,11 +340,11 @@ public:
 
         labFilename = new QLabel(widget_data);
         labFilename->setObjectName(QString::fromUtf8("labFilename"));
-        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(labFilename->sizePolicy().hasHeightForWidth());
-        labFilename->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(labFilename->sizePolicy().hasHeightForWidth());
+        labFilename->setSizePolicy(sizePolicy3);
         QFont font1;
         font1.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
         font1.setPointSize(8);
@@ -335,14 +357,27 @@ public:
 
         horizontalLayout_6->addItem(horizontalSpacer);
 
+        btnShowMenu = new QPushButton(widget_data);
+        btnShowMenu->setObjectName(QString::fromUtf8("btnShowMenu"));
+        QSizePolicy sizePolicy4(QSizePolicy::Minimum, QSizePolicy::Maximum);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(btnShowMenu->sizePolicy().hasHeightForWidth());
+        btnShowMenu->setSizePolicy(sizePolicy4);
+        btnShowMenu->setMaximumSize(QSize(16777215, 80));
+
+        horizontalLayout_6->addWidget(btnShowMenu);
+
         horizontalLayout_6->setStretch(0, 1);
         horizontalLayout_6->setStretch(1, 1);
         horizontalLayout_6->setStretch(2, 25);
 
         verticalLayout->addWidget(widget_data);
 
-        childwidget = new QWidget(centralwidget);
+        childwidget = new QWidget(widget_2);
         childwidget->setObjectName(QString::fromUtf8("childwidget"));
+        sizePolicy2.setHeightForWidth(childwidget->sizePolicy().hasHeightForWidth());
+        childwidget->setSizePolicy(sizePolicy2);
         QFont font2;
         font2.setPointSize(6);
         childwidget->setFont(font2);
@@ -350,9 +385,12 @@ public:
 
         verticalLayout->addWidget(childwidget);
 
-        verticalLayout->setStretch(0, 3);
-        verticalLayout->setStretch(1, 1);
-        verticalLayout->setStretch(2, 24);
+        verticalLayout->setStretch(0, 1);
+        verticalLayout->setStretch(1, 30);
+        splitter->addWidget(widget_2);
+
+        verticalLayout_2->addWidget(splitter);
+
         MainWindow->setCentralWidget(centralwidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -376,7 +414,7 @@ public:
         menu_V->addAction(action);
         menu_V->addAction(action_up);
         menu_V->addAction(action_down);
-        menu->addAction(actionT);
+        menu->addAction(action_showMenu);
         toolBar->addAction(action_O);
         toolBar->addSeparator();
         toolBar->addAction(action_S);
@@ -408,20 +446,21 @@ public:
 #if QT_CONFIG(tooltip)
         action_down->setToolTip(QCoreApplication::translate("MainWindow", "\347\274\251\345\260\217\350\257\225\345\233\276", nullptr));
 #endif // QT_CONFIG(tooltip)
-        actionT->setText(QCoreApplication::translate("MainWindow", "\345\256\232\346\227\266\345\231\250", nullptr));
+        action_showMenu->setText(QCoreApplication::translate("MainWindow", "\346\230\276\347\244\272\350\217\234\345\215\225\346\240\217", nullptr));
 #if QT_CONFIG(tooltip)
-        actionT->setToolTip(QCoreApplication::translate("MainWindow", "\345\256\232\346\227\266\345\231\250", nullptr));
+        action_showMenu->setToolTip(QCoreApplication::translate("MainWindow", "\345\256\232\346\227\266\345\231\250", nullptr));
 #endif // QT_CONFIG(tooltip)
         btnBend->setText(QCoreApplication::translate("MainWindow", "CAM\345\267\245\345\272\217\350\247\204\345\210\222", nullptr));
         btnSelect->setText(QCoreApplication::translate("MainWindow", "\350\256\276\345\244\207\351\200\211\345\236\213", nullptr));
-        btnSetting->setText(QCoreApplication::translate("MainWindow", "\345\267\245\350\211\272\350\247\204\345\210\222", nullptr));
+        btnSetting->setText(QCoreApplication::translate("MainWindow", "\346\223\215\344\275\234\347\256\241\347\220\206", nullptr));
         btnDiaplay->setText(QCoreApplication::translate("MainWindow", "\344\270\211\347\273\264\345\261\225\347\244\272", nullptr));
         btnProg->setText(QCoreApplication::translate("MainWindow", "\346\225\260\346\215\256\345\272\223\347\256\241\347\220\206", nullptr));
         btnShow->setText(QCoreApplication::translate("MainWindow", "\345\267\245\344\273\266\346\230\276\347\244\272", nullptr));
         labFilename->setText(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266\345\220\215\357\274\232", nullptr));
+        btnShowMenu->setText(QCoreApplication::translate("MainWindow", "<<\346\230\276\347\244\272\350\217\234\345\215\225\346\240\217", nullptr));
         menu_F->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266(&F)", nullptr));
         menu_V->setTitle(QCoreApplication::translate("MainWindow", "\350\247\206\345\233\276(&V)", nullptr));
-        menu->setTitle(QCoreApplication::translate("MainWindow", "\345\260\217\347\216\251\346\204\217", nullptr));
+        menu->setTitle(QCoreApplication::translate("MainWindow", "\350\217\234\345\215\225\346\240\217(&M)", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 

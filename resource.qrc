@@ -21,5 +21,37 @@
         <file>img/add.ico</file>
         <file>img/delete.ico</file>
         <file>img/JPG_icon.png</file>
+        <file>img/back.svg</file>
+        <file>img/back-square.svg</file>
+        <file>img/camera.svg</file>
+        <file>img/clip-plane.svg</file>
+        <file>img/cross.svg</file>
+        <file>img/edit.svg</file>
+        <file>img/expand.svg</file>
+        <file>img/export.svg</file>
+        <file>img/file.svg</file>
+        <file>img/gear.svg</file>
+        <file>img/import.svg</file>
+        <file>img/indicator-down_8.png</file>
+        <file>img/indicator-down-disabled_8.png</file>
+        <file>img/item-mesh.svg</file>
+        <file>img/item-xde.svg</file>
+        <file>img/left-sidebar.svg</file>
+        <file>img/link.svg</file>
+        <file>img/Micon.PNG</file>
+        <file>img/next.svg</file>
+        <file>img/select.png</file>
+        <file>img/stop.svg</file>
+        <file>img/view-back.svg</file>
+        <file>img/view-bottom.svg</file>
+        <file>img/view-front.svg</file>
+        <file>img/view-iso.svg</file>
+        <file>img/view-left.svg</file>
+        <file>img/view-right.svg</file>
+        <file>img/view-top.svg</file>
+        <file>img/xde-assembly.svg</file>
+        <file>img/xde-simple-shape.svg</file>
+        <file>img/zoom-in.svg</file>
+        <file>img/zoom-out.svg</file>
     </qresource>
 </RCC>

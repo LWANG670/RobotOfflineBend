@@ -67,7 +67,7 @@
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <QtInstall>msvc2017_64</QtInstall>
-    <QtModules>core;gui;widgets;xml</QtModules>
+    <QtModules>core;gui;sql;widgets;xml</QtModules>
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <QtInstall>msvc2017_64</QtInstall>
@@ -206,7 +206,7 @@
     <ClCompile Include="Coin3d\Robot.cpp" />
     <ClCompile Include="Coin3d\SoDHTransform.cpp" />
     <ClCompile Include="DBShower.cpp" />
-    <ClCompile Include="fileProgram\fileshower.cpp" />
+    <ClCompile Include="Dispaly.cpp" />
     <ClCompile Include="globalvars.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainwindow.cpp" />
@@ -215,6 +215,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="DBShower.h" />
+    <QtMoc Include="Dispaly.h" />
     <ClInclude Include="resource1.h" />
     <ClInclude Include="XMLReader.h" />
     <ClInclude Include="resource.h" />
@@ -223,8 +224,6 @@
     <ClInclude Include="Coin3d\Robot.h" />
     <ClInclude Include="Coin3d\SoDHTransform.h" />
     <ClInclude Include="Coin3d\ui_QtCoin3D_Robot.h" />
-    <QtMoc Include="fileProgram\fileshower.h">
-    </QtMoc>
     <ClInclude Include="globalvars.h" />
     <QtMoc Include="mainwindow.h">
     </QtMoc>
@@ -253,8 +252,7 @@
     <QtUic Include="BendFileReader.ui" />
     <QtUic Include="Coin3d\QtCoin3D_Robot.ui" />
     <QtUic Include="DBShower.ui" />
-    <QtUic Include="fileProgram\fileshower.ui">
-    </QtUic>
+    <QtUic Include="Dispaly.ui" />
     <QtUic Include="mainwindow.ui">
     </QtUic>
     <QtUic Include="SelectEquipment\selectequ.ui">

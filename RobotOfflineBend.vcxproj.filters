@@ -48,9 +48,6 @@
     <Filter Include="coin3d">
       <UniqueIdentifier>{cca8bc6f-8caf-4454-9a71-e5768920acd9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="fileProgram">
-      <UniqueIdentifier>{c0335668-1dc5-4ae5-b2bc-97877af4af0d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Dialog">
       <UniqueIdentifier>{49200cbf-b4c7-4e37-8b57-0bcbaef015e1}</UniqueIdentifier>
     </Filter>
@@ -77,9 +74,6 @@
     <ClCompile Include="Coin3d\SoDHTransform.cpp">
       <Filter>coin3d</Filter>
     </ClCompile>
-    <ClCompile Include="fileProgram\fileshower.cpp">
-      <Filter>fileProgram</Filter>
-    </ClCompile>
     <ClCompile Include="BendFileReader.cpp">
       <Filter>Dialog</Filter>
     </ClCompile>
@@ -87,6 +81,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DBShower.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dispaly.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -137,13 +134,13 @@
     <QtUic Include="Coin3d\QtCoin3D_Robot.ui">
       <Filter>coin3d</Filter>
     </QtUic>
-    <QtUic Include="fileProgram\fileshower.ui">
-      <Filter>fileProgram</Filter>
-    </QtUic>
     <QtUic Include="BendFileReader.ui">
       <Filter>Dialog</Filter>
     </QtUic>
     <QtUic Include="DBShower.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Dispaly.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -198,13 +195,13 @@
     <QtMoc Include="Coin3d\QtCoin3D_Robot.h">
       <Filter>coin3d</Filter>
     </QtMoc>
-    <QtMoc Include="fileProgram\fileshower.h">
-      <Filter>fileProgram</Filter>
-    </QtMoc>
     <QtMoc Include="BendFileReader.h">
       <Filter>Dialog</Filter>
     </QtMoc>
     <QtMoc Include="DBShower.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dispaly.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

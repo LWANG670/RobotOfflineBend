@@ -1104,7 +1104,7 @@ public:
         horizontalLayout_2->addWidget(widget_4);
 
         horizontalLayout_2->setStretch(0, 1);
-        horizontalLayout_2->setStretch(1, 4);
+        horizontalLayout_2->setStretch(1, 6);
         horizontalLayout_2->setStretch(2, 1);
 
         verticalLayout_4->addWidget(widget);

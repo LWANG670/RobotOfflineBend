@@ -2,6 +2,6 @@
 
 
 QString g_filePath="./file/";
-WorkpieceData g_workpiecedata;
+TotalData g_totalData;
 
 
