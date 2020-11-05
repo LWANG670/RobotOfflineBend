@@ -427,7 +427,7 @@
             <layout class="QVBoxLayout" name="verticalLayout_7">
              <item>
               <widget class="QWidget" name="widget_3" native="true">
-               <layout class="QVBoxLayout" name="verticalLayout_2" stretch="6,1">
+               <layout class="QVBoxLayout" name="verticalLayout_2" stretch="7,1">
                 <item>
                  <widget class="QWidget" name="widget_4" native="true">
                   <layout class="QVBoxLayout" name="verticalLayout_25">
@@ -649,7 +649,7 @@
                  <widget class="QWidget" name="widget_5" native="true">
                   <layout class="QHBoxLayout" name="horizontalLayout_3">
                    <item>
-                    <widget class="QToolButton" name="toolButton_3">
+                    <widget class="QToolButton" name="btnInsert">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -697,7 +697,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QToolButton" name="toolButton_4">
+                    <widget class="QToolButton" name="btnDel">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -1220,7 +1220,7 @@
             <layout class="QVBoxLayout" name="verticalLayout_19">
              <item>
               <widget class="QWidget" name="widget_19" native="true">
-               <layout class="QVBoxLayout" name="verticalLayout_20" stretch="6,1">
+               <layout class="QVBoxLayout" name="verticalLayout_20" stretch="4,1">
                 <item>
                  <widget class="QWidget" name="widget_20" native="true">
                   <widget class="QLabel" name="label_7">
@@ -1370,7 +1370,7 @@
             <layout class="QVBoxLayout" name="verticalLayout_22">
              <item>
               <widget class="QWidget" name="widget_22" native="true">
-               <layout class="QVBoxLayout" name="verticalLayout_23" stretch="6,1">
+               <layout class="QVBoxLayout" name="verticalLayout_23" stretch="4,1">
                 <item>
                  <widget class="QWidget" name="widget_23" native="true">
                   <widget class="QLabel" name="label_8">

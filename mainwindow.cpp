@@ -45,7 +45,10 @@ MainWindow::MainWindow(QWidget* parent)
 
 	connect(ui->action_showMenu, &QAction::triggered, this, &MainWindow::actionMenuTriggered);
 	connect(ui->btnShowMenu, &QPushButton::clicked, this, &MainWindow::actionMenuTriggered);
+	connect(this, &MainWindow::fileReaded, pDisplayWidget, &Dispaly::refreshFileData);
 
+	ui->widget_5->hide();
+	ui->widget_8->hide();
 }
 
 MainWindow::~MainWindow()
@@ -147,8 +150,9 @@ void MainWindow::on_action_O_triggered()
 	BendFileReader* filereader = new BendFileReader();
 	if (filereader->exec() == QDialog::Accepted)
 	{
-		ui->labFilename->setText(QString::fromLocal8Bit("文件名：") + g_filePath);
+		ui->labFilename->setText(("文件名：") + g_filePath);
 		g_totalData.totalBendData = filereader->getBendData();
+		emit fileReaded();
 	}
 	delete filereader;
 }

@@ -48,9 +48,6 @@ public:
     QWidget *widget_4;
     QHBoxLayout *horizontalLayout_3;
     QToolButton *btnSelect;
-    QWidget *widget_5;
-    QHBoxLayout *horizontalLayout_4;
-    QToolButton *btnSetting;
     QWidget *widget_6;
     QHBoxLayout *horizontalLayout_5;
     QToolButton *btnDiaplay;
@@ -60,6 +57,9 @@ public:
     QWidget *widget_8;
     QHBoxLayout *horizontalLayout_8;
     QToolButton *btnShow;
+    QWidget *widget_5;
+    QHBoxLayout *horizontalLayout_4;
+    QToolButton *btnSetting;
     QWidget *widget_9;
     QWidget *widget_2;
     QVBoxLayout *verticalLayout;
@@ -130,10 +130,7 @@ public:
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setStyleSheet(QString::fromUtf8(""));
         horizontalLayout = new QHBoxLayout(widget);
-        horizontalLayout->setSpacing(2);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
-        horizontalLayout->setContentsMargins(2, 2, 6, 0);
         widget_3 = new QWidget(widget);
         widget_3->setObjectName(QString::fromUtf8("widget_3"));
         widget_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -194,34 +191,6 @@ public:
 
         horizontalLayout->addWidget(widget_4);
 
-        widget_5 = new QWidget(widget);
-        widget_5->setObjectName(QString::fromUtf8("widget_5"));
-        widget_5->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
-""));
-        horizontalLayout_4 = new QHBoxLayout(widget_5);
-        horizontalLayout_4->setSpacing(0);
-        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
-        btnSetting = new QToolButton(widget_5);
-        btnSetting->setObjectName(QString::fromUtf8("btnSetting"));
-        sizePolicy1.setHeightForWidth(btnSetting->sizePolicy().hasHeightForWidth());
-        btnSetting->setSizePolicy(sizePolicy1);
-        btnSetting->setFont(font);
-        btnSetting->setContextMenuPolicy(Qt::ActionsContextMenu);
-        btnSetting->setStyleSheet(QString::fromUtf8("border:none;"));
-        QIcon icon7;
-        icon7.addFile(QString::fromUtf8(":/img/Setting.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        btnSetting->setIcon(icon7);
-        btnSetting->setIconSize(QSize(50, 50));
-        btnSetting->setAutoRepeatDelay(300);
-        btnSetting->setPopupMode(QToolButton::DelayedPopup);
-        btnSetting->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-
-        horizontalLayout_4->addWidget(btnSetting);
-
-
-        horizontalLayout->addWidget(widget_5);
-
         widget_6 = new QWidget(widget);
         widget_6->setObjectName(QString::fromUtf8("widget_6"));
         widget_6->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
@@ -237,9 +206,9 @@ public:
         btnDiaplay->setFont(font);
         btnDiaplay->setContextMenuPolicy(Qt::ActionsContextMenu);
         btnDiaplay->setStyleSheet(QString::fromUtf8("border:none;"));
-        QIcon icon8;
-        icon8.addFile(QString::fromUtf8(":/img/Display.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        btnDiaplay->setIcon(icon8);
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/img/Display.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        btnDiaplay->setIcon(icon7);
         btnDiaplay->setIconSize(QSize(50, 50));
         btnDiaplay->setAutoRepeatDelay(300);
         btnDiaplay->setPopupMode(QToolButton::DelayedPopup);
@@ -265,9 +234,9 @@ public:
         btnProg->setFont(font);
         btnProg->setContextMenuPolicy(Qt::ActionsContextMenu);
         btnProg->setStyleSheet(QString::fromUtf8("border:none;"));
-        QIcon icon9;
-        icon9.addFile(QString::fromUtf8(":/img/Program.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        btnProg->setIcon(icon9);
+        QIcon icon8;
+        icon8.addFile(QString::fromUtf8(":/img/Program.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        btnProg->setIcon(icon8);
         btnProg->setIconSize(QSize(50, 50));
         btnProg->setAutoRepeatDelay(300);
         btnProg->setPopupMode(QToolButton::DelayedPopup);
@@ -292,9 +261,9 @@ public:
         btnShow->setFont(font);
         btnShow->setContextMenuPolicy(Qt::ActionsContextMenu);
         btnShow->setStyleSheet(QString::fromUtf8("border:none;"));
-        QIcon icon10;
-        icon10.addFile(QString::fromUtf8(":/img/Show.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        btnShow->setIcon(icon10);
+        QIcon icon9;
+        icon9.addFile(QString::fromUtf8(":/img/Show.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        btnShow->setIcon(icon9);
         btnShow->setIconSize(QSize(50, 50));
         btnShow->setAutoRepeatDelay(300);
         btnShow->setPopupMode(QToolButton::DelayedPopup);
@@ -304,6 +273,34 @@ public:
 
 
         horizontalLayout->addWidget(widget_8);
+
+        widget_5 = new QWidget(widget);
+        widget_5->setObjectName(QString::fromUtf8("widget_5"));
+        widget_5->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+""));
+        horizontalLayout_4 = new QHBoxLayout(widget_5);
+        horizontalLayout_4->setSpacing(0);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
+        btnSetting = new QToolButton(widget_5);
+        btnSetting->setObjectName(QString::fromUtf8("btnSetting"));
+        sizePolicy1.setHeightForWidth(btnSetting->sizePolicy().hasHeightForWidth());
+        btnSetting->setSizePolicy(sizePolicy1);
+        btnSetting->setFont(font);
+        btnSetting->setContextMenuPolicy(Qt::ActionsContextMenu);
+        btnSetting->setStyleSheet(QString::fromUtf8("border:none;"));
+        QIcon icon10;
+        icon10.addFile(QString::fromUtf8(":/img/Setting.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        btnSetting->setIcon(icon10);
+        btnSetting->setIconSize(QSize(50, 50));
+        btnSetting->setAutoRepeatDelay(300);
+        btnSetting->setPopupMode(QToolButton::DelayedPopup);
+        btnSetting->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+
+        horizontalLayout_4->addWidget(btnSetting);
+
+
+        horizontalLayout->addWidget(widget_5);
 
         widget_9 = new QWidget(widget);
         widget_9->setObjectName(QString::fromUtf8("widget_9"));
@@ -316,7 +313,7 @@ public:
         horizontalLayout->setStretch(3, 1);
         horizontalLayout->setStretch(4, 1);
         horizontalLayout->setStretch(5, 1);
-        horizontalLayout->setStretch(6, 6);
+        horizontalLayout->setStretch(6, 3);
         splitter->addWidget(widget);
         widget_2 = new QWidget(splitter);
         widget_2->setObjectName(QString::fromUtf8("widget_2"));
@@ -452,10 +449,10 @@ public:
 #endif // QT_CONFIG(tooltip)
         btnBend->setText(QCoreApplication::translate("MainWindow", "CAM\345\267\245\345\272\217\350\247\204\345\210\222", nullptr));
         btnSelect->setText(QCoreApplication::translate("MainWindow", "\350\256\276\345\244\207\351\200\211\345\236\213", nullptr));
-        btnSetting->setText(QCoreApplication::translate("MainWindow", "\346\223\215\344\275\234\347\256\241\347\220\206", nullptr));
         btnDiaplay->setText(QCoreApplication::translate("MainWindow", "\344\270\211\347\273\264\345\261\225\347\244\272", nullptr));
         btnProg->setText(QCoreApplication::translate("MainWindow", "\346\225\260\346\215\256\345\272\223\347\256\241\347\220\206", nullptr));
         btnShow->setText(QCoreApplication::translate("MainWindow", "\345\267\245\344\273\266\346\230\276\347\244\272", nullptr));
+        btnSetting->setText(QCoreApplication::translate("MainWindow", "\346\223\215\344\275\234\347\256\241\347\220\206", nullptr));
         labFilename->setText(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266\345\220\215\357\274\232", nullptr));
         btnShowMenu->setText(QCoreApplication::translate("MainWindow", "<<\346\230\276\347\244\272\350\217\234\345\215\225\346\240\217", nullptr));
         menu_F->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266(&F)", nullptr));

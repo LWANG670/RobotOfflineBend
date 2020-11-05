@@ -54,5 +54,8 @@ private slots:
 
     void actionMenuTriggered();
 
+signals:
+    void fileReaded();
+
 };
 #endif // MAINWINDOW_H

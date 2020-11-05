@@ -205,6 +205,7 @@
     <ClCompile Include="Coin3d\QtCoin3D_Robot.cpp" />
     <ClCompile Include="Coin3d\Robot.cpp" />
     <ClCompile Include="Coin3d\SoDHTransform.cpp" />
+    <ClCompile Include="DBInsertDlg.cpp" />
     <ClCompile Include="DBShower.cpp" />
     <ClCompile Include="Dispaly.cpp" />
     <ClCompile Include="globalvars.cpp" />
@@ -216,6 +217,7 @@
   <ItemGroup>
     <QtMoc Include="DBShower.h" />
     <QtMoc Include="Dispaly.h" />
+    <QtMoc Include="DBInsertDlg.h" />
     <ClInclude Include="resource1.h" />
     <ClInclude Include="XMLReader.h" />
     <ClInclude Include="resource.h" />
@@ -251,6 +253,7 @@
   <ItemGroup>
     <QtUic Include="BendFileReader.ui" />
     <QtUic Include="Coin3d\QtCoin3D_Robot.ui" />
+    <QtUic Include="DBInsertDlg.ui" />
     <QtUic Include="DBShower.ui" />
     <QtUic Include="Dispaly.ui" />
     <QtUic Include="mainwindow.ui">
@@ -259,22 +262,8 @@
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\Bend.ico" />
-    <None Include="img\Center.ico" />
-    <None Include="img\Display.ico" />
-    <None Include="img\Machine.png" />
-    <None Include="img\Program.ico" />
-    <None Include="img\Robot.ico" />
-    <None Include="img\Select.ico" />
-    <None Include="img\Setting.ico" />
-    <None Include="img\Show.ico" />
-    <None Include="img\bendmachine.ico" />
-    <None Include="img\open.png" />
     <QtRcc Include="resource.qrc">
     </QtRcc>
-    <None Include="img\save.png" />
-    <None Include="img\zoom-in.png" />
-    <None Include="img\zoom-out.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

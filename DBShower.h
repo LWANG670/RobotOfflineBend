@@ -5,6 +5,7 @@
 #include <QSqlDatabase>
 #include <QtSql>
 #include <QTableView>
+#include "DBInsertDlg.h"
 
 class DBShower : public QWidget
 {
@@ -44,6 +45,9 @@ private slots:
 	void btnFlipClick();
 	void btnUpClick();
 	void btnDownClick();
+
+	void btnInsertClick();
+	void btnDelClick();
 
 	void changeSelectItem(QModelIndex index);
 	void changePiecesItem(QModelIndex index);

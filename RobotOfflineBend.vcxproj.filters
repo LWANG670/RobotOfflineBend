@@ -86,6 +86,9 @@
     <ClCompile Include="Dispaly.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DBInsertDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="globalvars.h">
@@ -143,53 +146,14 @@
     <QtUic Include="Dispaly.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="DBInsertDlg.ui">
+      <Filter>Dialog</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\Bend.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="img\Center.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="img\Display.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="img\Machine.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="img\Program.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="img\Robot.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="img\Select.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="img\Setting.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="img\Show.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="img\bendmachine.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="img\open.png">
-      <Filter>Resource Files</Filter>
-    </None>
     <QtRcc Include="resource.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <None Include="img\save.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="img\zoom-in.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="img\zoom-out.png">
-      <Filter>Resource Files</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Coin3d\QtCoin3D_Robot.h">
@@ -203,6 +167,9 @@
     </QtMoc>
     <QtMoc Include="Dispaly.h">
       <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DBInsertDlg.h">
+      <Filter>Dialog</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>

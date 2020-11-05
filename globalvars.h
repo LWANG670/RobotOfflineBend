@@ -42,73 +42,76 @@ struct BendLineData
 
 struct BendData
 {
+	int count=0;
 	float thickeness;
 	QMap<int, BendSurfaceData> surfaces;
 	QMap<int, BendLineData> bendlines;
 };
 
+
+
+enum class WorkpieceType
+{
+	Machine, Robot, Center, Flip, Up, Down ,NONE
+};
+
+static QMap<int, QString>g_mapWorkpieces = { {0,"折弯机"}, {1,"机器人"},{2,"对中台"},{3,"翻面架"},{4,"上料台"},{5,"下料台"} };
+
 struct WorkpieceBasicInfo
 {
+	WorkpieceType workpieceType= WorkpieceType::NONE;
 	float xPos = 0;
 	float yPos = 0;
+	float zPos = 0;
+	float xAngle = 0;
+	float yAngle = 0;
 	float zAngle = 0;
 	QString workpieceName;
 	QString workpiecePath;
-	enum WorkpieceType
-	{
-		Machine, Robot, Center, Flip, Up, Down
-	};
 };
-
 //六个机器信息
-struct WorkpieceMachine
+struct WorkpieceMachine:WorkpieceBasicInfo
 {
-	WorkpieceBasicInfo basicInfo;
 	QString data1 = "";
 	QString data2 = "";
 	QString data3 = "";
 	QString data4 = "";
 };
 
-struct WorkpieceRobot
+struct WorkpieceRobot:WorkpieceBasicInfo
 {
-	WorkpieceBasicInfo basicInfo;
 	QString data1 = "";
 	QString data2 = "";
 	QString data3 = "";
 	QString data4 = "";
 };
 
-struct WorkpieceCenter
+struct WorkpieceCenter:WorkpieceBasicInfo
 {
-	WorkpieceBasicInfo basicInfo;
 	QString data1 = "";
 	QString data2 = "";
 	QString data3 = "";
 	QString data4 = "";
 };
 
-struct WorkpieceFlip
+struct WorkpieceFlip:WorkpieceBasicInfo
 {
-	WorkpieceBasicInfo basicInfo;
 	QString data1 = "";
 	QString data2 = "";
 	QString data3 = "";
 	QString data4 = "";
 };
 
-struct WorkpieceUp
+struct WorkpieceUp:WorkpieceBasicInfo
 {
-	WorkpieceBasicInfo basicInfo;
 	QString data1 = "";
 	QString data2 = "";
 	QString data3 = "";
 	QString data4 = "";
 };
 
-struct WorkpieceDown
+struct WorkpieceDown:WorkpieceBasicInfo
 {
-	WorkpieceBasicInfo basicInfo;
 	QString data1 = "";
 	QString data2 = "";
 	QString data3 = "";
@@ -132,6 +135,7 @@ struct TotalData
 
 };
 
+extern QString g_fileName;
 extern QString g_filePath;
 extern TotalData g_totalData;
 

@@ -37,6 +37,7 @@ public:
     QToolButton *btnFlip;
     QToolButton *btnUp;
     QToolButton *btnDown;
+    QLineEdit *lineEdit;
     QSpacerItem *verticalSpacer;
     QWidget *widget_3;
     QWidget *widget_4;
@@ -298,6 +299,11 @@ public:
 
         verticalLayout_3->addWidget(btnDown);
 
+        lineEdit = new QLineEdit(widget_choose);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+
+        verticalLayout_3->addWidget(lineEdit);
+
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_3->addItem(verticalSpacer);
@@ -308,7 +314,7 @@ public:
         verticalLayout_3->setStretch(3, 1);
         verticalLayout_3->setStretch(4, 1);
         verticalLayout_3->setStretch(5, 1);
-        verticalLayout_3->setStretch(6, 1);
+        verticalLayout_3->setStretch(7, 1);
 
         horizontalLayout_2->addWidget(widget_choose);
 
@@ -1112,7 +1118,7 @@ public:
 
         retranslateUi(SelectEqu);
 
-        stackedWidget->setCurrentIndex(5);
+        stackedWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(SelectEqu);
@@ -1127,6 +1133,7 @@ public:
         btnFlip->setText(QCoreApplication::translate("SelectEqu", "\347\277\273\351\235\242\346\236\266", nullptr));
         btnUp->setText(QCoreApplication::translate("SelectEqu", "\344\270\212\346\226\231\345\217\260", nullptr));
         btnDown->setText(QCoreApplication::translate("SelectEqu", "\344\270\213\346\226\231\345\217\260", nullptr));
+        lineEdit->setInputMask(QString());
         labTitle->setText(QCoreApplication::translate("SelectEqu", "\346\212\230\345\274\257\346\234\272\351\200\211\345\217\226", nullptr));
         labType->setText(QCoreApplication::translate("SelectEqu", "\346\212\230\345\274\257\346\234\272\345\236\213\345\217\267\357\274\232", nullptr));
         btnMachineSelect->setText(QCoreApplication::translate("SelectEqu", "\346\225\260\346\215\256\345\272\223\351\200\211\345\217\226", nullptr));

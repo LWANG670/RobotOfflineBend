@@ -53,5 +53,6 @@
         <file>img/xde-simple-shape.svg</file>
         <file>img/zoom-in.svg</file>
         <file>img/zoom-out.svg</file>
+        <file>img/refresh.ico</file>
     </qresource>
 </RCC>

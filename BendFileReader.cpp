@@ -37,6 +37,7 @@ void BendFileReader::btnSureClicked()
 	    int path_size = g_filePath.size();
 	    QString fileName = g_filePath.right(path_size-size).toLower();
 	    //确定是哪种格式的文件
+		g_fileName = fileName;
 	    QString type = fileName.split(".").at(1);
 	    if(type=="txt")
 	    {
@@ -80,12 +81,14 @@ void BendFileReader::txtReader(QString filepath)
 	}
 	i = i + 2;
 	//bendLine
+	int count=0;
 	while (*i != "endbendline")
 	{
 		readBendLineData(*i);
+		++count;
 		i++;
 	}
-	int a = 0;
+	bendData.count = count;
 }
 
 void BendFileReader::readSurfaceData(QString surfacedata)

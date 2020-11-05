@@ -18,9 +18,13 @@ DBShower::DBShower(QWidget *parent)
 	connect(ui.btnFlip, &QPushButton::clicked, this, &DBShower::btnFlipClick);
 	connect(ui.btnUp, &QPushButton::clicked, this, &DBShower::btnUpClick);
 	connect(ui.btnDown, &QPushButton::clicked, this, &DBShower::btnDownClick);
+	connect(ui.btnInsert, &QPushButton::clicked, this, &DBShower::btnInsertClick);
+	connect(ui.btnInsert, &QPushButton::clicked, this, &DBShower::btnDelClick);
 
 	connect(pPiecesView, SIGNAL(clicked(QModelIndex)), this, SLOT(changePiecesItem(QModelIndex)));
 	connect(pSelectPieceView, SIGNAL(clicked(QModelIndex)), this, SLOT(changeSelectItem(QModelIndex)));
+
+	
 }
 
 DBShower::~DBShower()
@@ -83,7 +87,6 @@ void DBShower::initSqlite()
 			}
 		}
 	}
-	
 }
 
 void DBShower::initTableView()
@@ -121,9 +124,8 @@ void DBShower::initTableView()
 	pSelectPieceView->setAlternatingRowColors(true);
 
 	pPiecesView->setModel(pPiecesModel);
-	pPiecesView->setColumnWidth(0, 100);
-	pPiecesView->setColumnWidth(1, 70);
-	pPiecesView->setColumnWidth(2, 200);
+	pPiecesView->setColumnWidth(0, 150);
+	pPiecesView->setColumnWidth(1, 150);
 }
 
 void DBShower::changePiecesItem(QModelIndex index)
@@ -197,6 +199,14 @@ void DBShower::btnMachineClick()
 {
 	pCurModel = pMachineModel;
 	pSelectPieceView->setModel(pCurModel);
+	pSelectPieceView->setColumnWidth(0, 100);
+	pSelectPieceView->setColumnWidth(1, 100);
+	pSelectPieceView->setColumnWidth(2, 100);
+	pSelectPieceView->setColumnWidth(3, 100);
+	pSelectPieceView->setColumnWidth(4, 100);
+	pSelectPieceView->setColumnWidth(5, 100);
+	pSelectPieceView->setColumnWidth(6, 100);
+	pSelectPieceView->setColumnWidth(7, 400);
 	pPiecesModel->setFilter("type='ÕÛÍä»ú'");
 	ui.stackedWidget->setCurrentIndex(0);
 
@@ -246,4 +256,21 @@ void DBShower::btnDownClick()
 	ui.stackedWidget->setCurrentIndex(5);
 	initChooseWidget();
 	ui.btnDown->setStyleSheet("background-color: rgb(255,235,205);border: 3px solid;border-radius: 20px;");
+}
+
+void DBShower::btnInsertClick()
+{
+	DBInsertDlg* insertDlg = new DBInsertDlg(this);
+	if (insertDlg->exec() == QDialog::Accepted)
+	{
+		//pMachineModel->setTable("machines");
+		//pMachineModel->select();
+	}
+	delete insertDlg;
+}
+
+void DBShower::btnDelClick() 
+{
+	
+
 }

@@ -9,11 +9,13 @@ class Dispaly : public QWidget
 	Q_OBJECT
 
 public:
-	Dispaly(QWidget *parent = Q_NULLPTR);
+	Dispaly(QWidget *parent);
 	~Dispaly();
 
 private:
 	Ui::Dispaly ui;
+
+	QWidget* mainWindow;
 
 	void initTreeWeidgt();
 	QTreeWidgetItem* itemBends;//折弯工件 子项
@@ -21,6 +23,10 @@ private:
 	QTreeWidgetItem* itemSettings;//设置等 子项
 	//QTreeWidgetItem* m_itemOthers;//其它文件 子项
 
-private slots:
+	//初始化数据显示界面
+	void initBendDataShow();
+
+public slots:
+	void refreshFileData();
 
 };

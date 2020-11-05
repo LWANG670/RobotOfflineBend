@@ -84,8 +84,8 @@ public:
     QSpacerItem *verticalSpacer;
     QWidget *widget_5;
     QHBoxLayout *horizontalLayout_3;
-    QToolButton *toolButton_3;
-    QToolButton *toolButton_4;
+    QToolButton *btnInsert;
+    QToolButton *btnDel;
     QWidget *page_2;
     QVBoxLayout *verticalLayout_12;
     QGroupBox *groupBox_5;
@@ -525,53 +525,53 @@ public:
         horizontalLayout_3->setSpacing(6);
         horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        toolButton_3 = new QToolButton(widget_5);
-        toolButton_3->setObjectName(QString::fromUtf8("toolButton_3"));
+        btnInsert = new QToolButton(widget_5);
+        btnInsert->setObjectName(QString::fromUtf8("btnInsert"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(toolButton_3->sizePolicy().hasHeightForWidth());
-        toolButton_3->setSizePolicy(sizePolicy1);
+        sizePolicy1.setHeightForWidth(btnInsert->sizePolicy().hasHeightForWidth());
+        btnInsert->setSizePolicy(sizePolicy1);
         QFont font3;
         font3.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
         font3.setPointSize(16);
         font3.setKerning(true);
-        toolButton_3->setFont(font3);
-        toolButton_3->setContextMenuPolicy(Qt::DefaultContextMenu);
-        toolButton_3->setLayoutDirection(Qt::LeftToRight);
-        toolButton_3->setStyleSheet(QString::fromUtf8("background-color: rgb(229, 229, 229);"));
+        btnInsert->setFont(font3);
+        btnInsert->setContextMenuPolicy(Qt::DefaultContextMenu);
+        btnInsert->setLayoutDirection(Qt::LeftToRight);
+        btnInsert->setStyleSheet(QString::fromUtf8("background-color: rgb(229, 229, 229);"));
         QIcon icon6;
         icon6.addFile(QString::fromUtf8(":/img/add.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_3->setIcon(icon6);
-        toolButton_3->setIconSize(QSize(40, 40));
-        toolButton_3->setCheckable(false);
-        toolButton_3->setChecked(false);
-        toolButton_3->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+        btnInsert->setIcon(icon6);
+        btnInsert->setIconSize(QSize(40, 40));
+        btnInsert->setCheckable(false);
+        btnInsert->setChecked(false);
+        btnInsert->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
-        horizontalLayout_3->addWidget(toolButton_3);
+        horizontalLayout_3->addWidget(btnInsert);
 
-        toolButton_4 = new QToolButton(widget_5);
-        toolButton_4->setObjectName(QString::fromUtf8("toolButton_4"));
-        sizePolicy1.setHeightForWidth(toolButton_4->sizePolicy().hasHeightForWidth());
-        toolButton_4->setSizePolicy(sizePolicy1);
+        btnDel = new QToolButton(widget_5);
+        btnDel->setObjectName(QString::fromUtf8("btnDel"));
+        sizePolicy1.setHeightForWidth(btnDel->sizePolicy().hasHeightForWidth());
+        btnDel->setSizePolicy(sizePolicy1);
         QFont font4;
         font4.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
         font4.setPointSize(16);
-        toolButton_4->setFont(font4);
-        toolButton_4->setStyleSheet(QString::fromUtf8("background-color: rgb(229, 229, 229);"));
+        btnDel->setFont(font4);
+        btnDel->setStyleSheet(QString::fromUtf8("background-color: rgb(229, 229, 229);"));
         QIcon icon7;
         icon7.addFile(QString::fromUtf8(":/img/delete.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_4->setIcon(icon7);
-        toolButton_4->setIconSize(QSize(40, 40));
-        toolButton_4->setPopupMode(QToolButton::DelayedPopup);
-        toolButton_4->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+        btnDel->setIcon(icon7);
+        btnDel->setIconSize(QSize(40, 40));
+        btnDel->setPopupMode(QToolButton::DelayedPopup);
+        btnDel->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
-        horizontalLayout_3->addWidget(toolButton_4);
+        horizontalLayout_3->addWidget(btnDel);
 
 
         verticalLayout_2->addWidget(widget_5);
 
-        verticalLayout_2->setStretch(0, 6);
+        verticalLayout_2->setStretch(0, 7);
         verticalLayout_2->setStretch(1, 1);
 
         verticalLayout_7->addWidget(widget_3);
@@ -879,7 +879,7 @@ public:
 
         verticalLayout_20->addWidget(widget_21);
 
-        verticalLayout_20->setStretch(0, 6);
+        verticalLayout_20->setStretch(0, 4);
         verticalLayout_20->setStretch(1, 1);
 
         verticalLayout_19->addWidget(widget_19);
@@ -956,7 +956,7 @@ public:
 
         verticalLayout_23->addWidget(widget_24);
 
-        verticalLayout_23->setStretch(0, 6);
+        verticalLayout_23->setStretch(0, 4);
         verticalLayout_23->setStretch(1, 1);
 
         verticalLayout_22->addWidget(widget_22);
@@ -1001,8 +1001,8 @@ public:
         label_11->setText(QCoreApplication::translate("DBShower", "\344\270\213\345\244\271\345\205\267\351\253\230\345\272\246\357\274\232", nullptr));
         label_12->setText(QCoreApplication::translate("DBShower", "\345\274\200\345\217\243\351\253\230\345\272\246\357\274\232", nullptr));
         label_13->setText(QCoreApplication::translate("DBShower", "\346\226\207\344\273\266\350\267\257\345\276\204\357\274\232", nullptr));
-        toolButton_3->setText(QCoreApplication::translate("DBShower", "  \346\226\260\345\242\236\346\225\260\346\215\256", nullptr));
-        toolButton_4->setText(QCoreApplication::translate("DBShower", "  \345\210\240\351\231\244\346\225\260\346\215\256", nullptr));
+        btnInsert->setText(QCoreApplication::translate("DBShower", "  \346\226\260\345\242\236\346\225\260\346\215\256", nullptr));
+        btnDel->setText(QCoreApplication::translate("DBShower", "  \345\210\240\351\231\244\346\225\260\346\215\256", nullptr));
         groupBox_5->setTitle(QCoreApplication::translate("DBShower", "\346\234\272\345\231\250\344\272\272", nullptr));
         label_4->setText(QCoreApplication::translate("DBShower", "TextLabel", nullptr));
         toolButton_7->setText(QCoreApplication::translate("DBShower", "  \346\226\260\345\242\236\346\225\260\346\215\256", nullptr));
