@@ -73,7 +73,7 @@ QFontComboBox {
 }
 QLabel {
 	color:rgb(17,17,17);
-	font:16px;
+
 }
 QLineEdit {
 	background-color:rgb(255,255,255);

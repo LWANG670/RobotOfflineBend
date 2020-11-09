@@ -30,8 +30,6 @@ MainWindow::MainWindow(QWidget* parent)
 	ui->childwidget->setGraphicsEffect(shadow);
 	ui->widget_data->setGraphicsEffect(shadow);
 
-
-
 	//子界面
 	//设备选型界面
 	pSelectWidget = new SelectEqu(ui->childwidget);
@@ -99,6 +97,11 @@ void MainWindow::on_btnBend_clicked()
 {
 	hideParentWidgets();
 	ui->widget_3->setStyleSheet("background-color: rgb(255,235,205);");
+	//QProcess* pProcess = new QProcess(this);
+	//QString sProgram = "F:\\release\\ui.exe";
+	//pProcess->setProgram(sProgram);
+	//pProcess->start();
+	//QProcess::execute("F:\\release\\ui.exe");
 }
 
 void MainWindow::on_btnSelect_clicked()

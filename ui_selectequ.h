@@ -12,6 +12,8 @@
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -37,34 +39,48 @@ public:
     QToolButton *btnFlip;
     QToolButton *btnUp;
     QToolButton *btnDown;
-    QLineEdit *lineEdit;
     QSpacerItem *verticalSpacer;
     QWidget *widget_3;
     QWidget *widget_4;
     QVBoxLayout *verticalLayout;
     QStackedWidget *stackedWidget;
     QWidget *page;
-    QVBoxLayout *verticalLayout_5;
-    QWidget *widget_5;
     QVBoxLayout *verticalLayout_2;
-    QHBoxLayout *horizontalLayout_10;
-    QLabel *labTitle;
+    QGroupBox *groupBox;
+    QVBoxLayout *verticalLayout_5;
+    QSpacerItem *verticalSpacer_10;
     QHBoxLayout *horizontalLayout_3;
     QLabel *labType;
-    QLineEdit *lineName;
-    QHBoxLayout *horizontalLayout_4;
-    QSpacerItem *horizontalSpacer;
-    QToolButton *btnMachineSelect;
+    QComboBox *comboBox;
+    QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_5;
     QLabel *labXpos;
     QLineEdit *lineXpos;
+    QSpacerItem *verticalSpacer_3;
     QHBoxLayout *horizontalLayout_6;
     QLabel *labYpos;
     QLineEdit *lineYpos;
+    QSpacerItem *verticalSpacer_4;
+    QHBoxLayout *horizontalLayout_10;
+    QLabel *labYpos_7;
+    QLineEdit *lineYpos_7;
+    QSpacerItem *verticalSpacer_5;
+    QHBoxLayout *horizontalLayout_40;
+    QLabel *labYpos_9;
+    QLineEdit *lineYpos_9;
+    QSpacerItem *verticalSpacer_6;
+    QHBoxLayout *horizontalLayout_39;
+    QLabel *labYpos_8;
+    QLineEdit *lineYpos_8;
+    QSpacerItem *verticalSpacer_7;
     QHBoxLayout *horizontalLayout_7;
     QLabel *labZangle;
     QLineEdit *lineZangle;
-    QLabel *labShow;
+    QSpacerItem *verticalSpacer_8;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer;
+    QToolButton *toolButton;
+    QSpacerItem *verticalSpacer_9;
     QWidget *page_2;
     QVBoxLayout *verticalLayout_7;
     QWidget *widget_6;
@@ -180,7 +196,7 @@ public:
     {
         if (SelectEqu->objectName().isEmpty())
             SelectEqu->setObjectName(QString::fromUtf8("SelectEqu"));
-        SelectEqu->resize(1092, 728);
+        SelectEqu->resize(1115, 728);
         verticalLayout_4 = new QVBoxLayout(SelectEqu);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -299,11 +315,6 @@ public:
 
         verticalLayout_3->addWidget(btnDown);
 
-        lineEdit = new QLineEdit(widget_choose);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-
-        verticalLayout_3->addWidget(lineEdit);
-
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_3->addItem(verticalSpacer);
@@ -314,7 +325,7 @@ public:
         verticalLayout_3->setStretch(3, 1);
         verticalLayout_3->setStretch(4, 1);
         verticalLayout_3->setStretch(5, 1);
-        verticalLayout_3->setStretch(7, 1);
+        verticalLayout_3->setStretch(6, 1);
 
         horizontalLayout_2->addWidget(widget_choose);
 
@@ -327,143 +338,232 @@ public:
         widget_4 = new QWidget(widget);
         widget_4->setObjectName(QString::fromUtf8("widget_4"));
         verticalLayout = new QVBoxLayout(widget_4);
+        verticalLayout->setSpacing(2);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        verticalLayout->setContentsMargins(2, 2, 2, 2);
         stackedWidget = new QStackedWidget(widget_4);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
         page = new QWidget();
         page->setObjectName(QString::fromUtf8("page"));
-        verticalLayout_5 = new QVBoxLayout(page);
-        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
-        widget_5 = new QWidget(page);
-        widget_5->setObjectName(QString::fromUtf8("widget_5"));
-        widget_5->setStyleSheet(QString::fromUtf8("background-color: rgb(240, 240, 240);"));
-        verticalLayout_2 = new QVBoxLayout(widget_5);
+        verticalLayout_2 = new QVBoxLayout(page);
+        verticalLayout_2->setSpacing(2);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        horizontalLayout_10 = new QHBoxLayout();
-        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
-        labTitle = new QLabel(widget_5);
-        labTitle->setObjectName(QString::fromUtf8("labTitle"));
-        sizePolicy.setHeightForWidth(labTitle->sizePolicy().hasHeightForWidth());
-        labTitle->setSizePolicy(sizePolicy);
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
-        font1.setPointSize(18);
-        labTitle->setFont(font1);
-        labTitle->setAlignment(Qt::AlignCenter);
+        verticalLayout_2->setContentsMargins(2, 2, 2, 2);
+        groupBox = new QGroupBox(page);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        verticalLayout_5 = new QVBoxLayout(groupBox);
+        verticalLayout_5->setSpacing(2);
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        verticalLayout_5->setContentsMargins(0, 5, 0, 0);
+        verticalSpacer_10 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
-        horizontalLayout_10->addWidget(labTitle);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_10);
+        verticalLayout_5->addItem(verticalSpacer_10);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        labType = new QLabel(widget_5);
+        labType = new QLabel(groupBox);
         labType->setObjectName(QString::fromUtf8("labType"));
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
-        font2.setPointSize(12);
-        labType->setFont(font2);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
+        font1.setPointSize(16);
+        labType->setFont(font1);
 
         horizontalLayout_3->addWidget(labType);
 
-        lineName = new QLineEdit(widget_5);
-        lineName->setObjectName(QString::fromUtf8("lineName"));
-        lineName->setFont(font2);
-        lineName->setStyleSheet(QString::fromUtf8("background:transparent;border-width:0;border-style:outset"));
-        lineName->setReadOnly(true);
+        comboBox = new QComboBox(groupBox);
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
+        font2.setPointSize(12);
+        comboBox->setFont(font2);
 
-        horizontalLayout_3->addWidget(lineName);
+        horizontalLayout_3->addWidget(comboBox);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_3);
+        verticalLayout_5->addLayout(horizontalLayout_3);
 
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        horizontalLayout_4->addItem(horizontalSpacer);
-
-        btnMachineSelect = new QToolButton(widget_5);
-        btnMachineSelect->setObjectName(QString::fromUtf8("btnMachineSelect"));
-        sizePolicy.setHeightForWidth(btnMachineSelect->sizePolicy().hasHeightForWidth());
-        btnMachineSelect->setSizePolicy(sizePolicy);
-        btnMachineSelect->setFont(font2);
-        btnMachineSelect->setStyleSheet(QString::fromUtf8("background-color: rgb(227, 227, 227);"));
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/img/datashow.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        btnMachineSelect->setIcon(icon6);
-        btnMachineSelect->setIconSize(QSize(30, 30));
-        btnMachineSelect->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-
-        horizontalLayout_4->addWidget(btnMachineSelect);
-
-        horizontalLayout_4->setStretch(0, 1);
-
-        verticalLayout_2->addLayout(horizontalLayout_4);
+        verticalLayout_5->addItem(verticalSpacer_2);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        labXpos = new QLabel(widget_5);
+        labXpos = new QLabel(groupBox);
         labXpos->setObjectName(QString::fromUtf8("labXpos"));
-        labXpos->setFont(font2);
+        labXpos->setFont(font1);
 
         horizontalLayout_5->addWidget(labXpos);
 
-        lineXpos = new QLineEdit(widget_5);
+        lineXpos = new QLineEdit(groupBox);
         lineXpos->setObjectName(QString::fromUtf8("lineXpos"));
         lineXpos->setFont(font2);
+        lineXpos->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_5->addWidget(lineXpos);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_5);
+        verticalLayout_5->addLayout(horizontalLayout_5);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer_3);
 
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
-        labYpos = new QLabel(widget_5);
+        labYpos = new QLabel(groupBox);
         labYpos->setObjectName(QString::fromUtf8("labYpos"));
-        labYpos->setFont(font2);
+        labYpos->setFont(font1);
 
         horizontalLayout_6->addWidget(labYpos);
 
-        lineYpos = new QLineEdit(widget_5);
+        lineYpos = new QLineEdit(groupBox);
         lineYpos->setObjectName(QString::fromUtf8("lineYpos"));
         lineYpos->setFont(font2);
+        lineYpos->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_6->addWidget(lineYpos);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_6);
+        verticalLayout_5->addLayout(horizontalLayout_6);
+
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer_4);
+
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
+        labYpos_7 = new QLabel(groupBox);
+        labYpos_7->setObjectName(QString::fromUtf8("labYpos_7"));
+        labYpos_7->setFont(font1);
+
+        horizontalLayout_10->addWidget(labYpos_7);
+
+        lineYpos_7 = new QLineEdit(groupBox);
+        lineYpos_7->setObjectName(QString::fromUtf8("lineYpos_7"));
+        lineYpos_7->setFont(font2);
+        lineYpos_7->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_10->addWidget(lineYpos_7);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_10);
+
+        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer_5);
+
+        horizontalLayout_40 = new QHBoxLayout();
+        horizontalLayout_40->setObjectName(QString::fromUtf8("horizontalLayout_40"));
+        labYpos_9 = new QLabel(groupBox);
+        labYpos_9->setObjectName(QString::fromUtf8("labYpos_9"));
+        labYpos_9->setFont(font1);
+
+        horizontalLayout_40->addWidget(labYpos_9);
+
+        lineYpos_9 = new QLineEdit(groupBox);
+        lineYpos_9->setObjectName(QString::fromUtf8("lineYpos_9"));
+        lineYpos_9->setFont(font2);
+        lineYpos_9->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_40->addWidget(lineYpos_9);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_40);
+
+        verticalSpacer_6 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer_6);
+
+        horizontalLayout_39 = new QHBoxLayout();
+        horizontalLayout_39->setObjectName(QString::fromUtf8("horizontalLayout_39"));
+        labYpos_8 = new QLabel(groupBox);
+        labYpos_8->setObjectName(QString::fromUtf8("labYpos_8"));
+        labYpos_8->setFont(font1);
+
+        horizontalLayout_39->addWidget(labYpos_8);
+
+        lineYpos_8 = new QLineEdit(groupBox);
+        lineYpos_8->setObjectName(QString::fromUtf8("lineYpos_8"));
+        lineYpos_8->setFont(font2);
+        lineYpos_8->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_39->addWidget(lineYpos_8);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_39);
+
+        verticalSpacer_7 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer_7);
 
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
-        labZangle = new QLabel(widget_5);
+        labZangle = new QLabel(groupBox);
         labZangle->setObjectName(QString::fromUtf8("labZangle"));
-        labZangle->setFont(font2);
+        labZangle->setFont(font1);
 
         horizontalLayout_7->addWidget(labZangle);
 
-        lineZangle = new QLineEdit(widget_5);
+        lineZangle = new QLineEdit(groupBox);
         lineZangle->setObjectName(QString::fromUtf8("lineZangle"));
         lineZangle->setFont(font2);
+        lineZangle->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_7->addWidget(lineZangle);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_7);
+        verticalLayout_5->addLayout(horizontalLayout_7);
+
+        verticalSpacer_8 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer_8);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        toolButton = new QToolButton(groupBox);
+        toolButton->setObjectName(QString::fromUtf8("toolButton"));
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
+        font3.setPointSize(18);
+        toolButton->setFont(font3);
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/img/datashow.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton->setIcon(icon6);
+        toolButton->setIconSize(QSize(32, 32));
+        toolButton->setCheckable(false);
+        toolButton->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+
+        horizontalLayout->addWidget(toolButton);
 
 
-        verticalLayout_5->addWidget(widget_5);
+        verticalLayout_5->addLayout(horizontalLayout);
 
-        labShow = new QLabel(page);
-        labShow->setObjectName(QString::fromUtf8("labShow"));
-        labShow->setLayoutDirection(Qt::LeftToRight);
-        labShow->setStyleSheet(QString::fromUtf8("background-color: rgb(212, 212, 212);"));
-        labShow->setAlignment(Qt::AlignCenter);
+        verticalSpacer_9 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_5->addWidget(labShow);
+        verticalLayout_5->addItem(verticalSpacer_9);
+
+        verticalLayout_5->setStretch(1, 2);
+        verticalLayout_5->setStretch(2, 1);
+        verticalLayout_5->setStretch(3, 1);
+        verticalLayout_5->setStretch(4, 1);
+        verticalLayout_5->setStretch(5, 1);
+        verticalLayout_5->setStretch(6, 1);
+        verticalLayout_5->setStretch(7, 1);
+        verticalLayout_5->setStretch(8, 1);
+        verticalLayout_5->setStretch(9, 1);
+        verticalLayout_5->setStretch(10, 1);
+        verticalLayout_5->setStretch(11, 1);
+        verticalLayout_5->setStretch(12, 1);
+        verticalLayout_5->setStretch(13, 1);
+        verticalLayout_5->setStretch(14, 4);
+        verticalLayout_5->setStretch(15, 1);
+        verticalLayout_5->setStretch(16, 1);
+
+        verticalLayout_2->addWidget(groupBox);
 
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
@@ -481,7 +581,7 @@ public:
         labTitle_2->setObjectName(QString::fromUtf8("labTitle_2"));
         sizePolicy.setHeightForWidth(labTitle_2->sizePolicy().hasHeightForWidth());
         labTitle_2->setSizePolicy(sizePolicy);
-        labTitle_2->setFont(font1);
+        labTitle_2->setFont(font3);
         labTitle_2->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_11->addWidget(labTitle_2);
@@ -608,7 +708,7 @@ public:
         labTitle_3->setObjectName(QString::fromUtf8("labTitle_3"));
         sizePolicy.setHeightForWidth(labTitle_3->sizePolicy().hasHeightForWidth());
         labTitle_3->setSizePolicy(sizePolicy);
-        labTitle_3->setFont(font1);
+        labTitle_3->setFont(font3);
         labTitle_3->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_15->addWidget(labTitle_3);
@@ -736,7 +836,7 @@ public:
         labTitle_4->setObjectName(QString::fromUtf8("labTitle_4"));
         sizePolicy.setHeightForWidth(labTitle_4->sizePolicy().hasHeightForWidth());
         labTitle_4->setSizePolicy(sizePolicy);
-        labTitle_4->setFont(font1);
+        labTitle_4->setFont(font3);
         labTitle_4->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_21->addWidget(labTitle_4);
@@ -864,7 +964,7 @@ public:
         labTitle_5->setObjectName(QString::fromUtf8("labTitle_5"));
         sizePolicy.setHeightForWidth(labTitle_5->sizePolicy().hasHeightForWidth());
         labTitle_5->setSizePolicy(sizePolicy);
-        labTitle_5->setFont(font1);
+        labTitle_5->setFont(font3);
         labTitle_5->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_27->addWidget(labTitle_5);
@@ -991,7 +1091,7 @@ public:
         labTitle_6->setObjectName(QString::fromUtf8("labTitle_6"));
         sizePolicy.setHeightForWidth(labTitle_6->sizePolicy().hasHeightForWidth());
         labTitle_6->setSizePolicy(sizePolicy);
-        labTitle_6->setFont(font1);
+        labTitle_6->setFont(font3);
         labTitle_6->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_33->addWidget(labTitle_6);
@@ -1110,15 +1210,15 @@ public:
         horizontalLayout_2->addWidget(widget_4);
 
         horizontalLayout_2->setStretch(0, 1);
-        horizontalLayout_2->setStretch(1, 6);
-        horizontalLayout_2->setStretch(2, 1);
+        horizontalLayout_2->setStretch(1, 8);
+        horizontalLayout_2->setStretch(2, 2);
 
         verticalLayout_4->addWidget(widget);
 
 
         retranslateUi(SelectEqu);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(SelectEqu);
@@ -1133,14 +1233,21 @@ public:
         btnFlip->setText(QCoreApplication::translate("SelectEqu", "\347\277\273\351\235\242\346\236\266", nullptr));
         btnUp->setText(QCoreApplication::translate("SelectEqu", "\344\270\212\346\226\231\345\217\260", nullptr));
         btnDown->setText(QCoreApplication::translate("SelectEqu", "\344\270\213\346\226\231\345\217\260", nullptr));
-        lineEdit->setInputMask(QString());
-        labTitle->setText(QCoreApplication::translate("SelectEqu", "\346\212\230\345\274\257\346\234\272\351\200\211\345\217\226", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("SelectEqu", "\346\212\230\345\274\257\346\234\272\351\200\211\345\217\226", nullptr));
         labType->setText(QCoreApplication::translate("SelectEqu", "\346\212\230\345\274\257\346\234\272\345\236\213\345\217\267\357\274\232", nullptr));
-        btnMachineSelect->setText(QCoreApplication::translate("SelectEqu", "\346\225\260\346\215\256\345\272\223\351\200\211\345\217\226", nullptr));
         labXpos->setText(QCoreApplication::translate("SelectEqu", "X\350\275\264\345\235\220\346\240\207\357\274\232", nullptr));
+        lineXpos->setText(QCoreApplication::translate("SelectEqu", "0", nullptr));
         labYpos->setText(QCoreApplication::translate("SelectEqu", "Y\350\275\264\345\235\220\346\240\207\357\274\232", nullptr));
+        lineYpos->setText(QCoreApplication::translate("SelectEqu", "0", nullptr));
+        labYpos_7->setText(QCoreApplication::translate("SelectEqu", "Z\350\275\264\345\235\220\346\240\207\357\274\232", nullptr));
+        lineYpos_7->setText(QCoreApplication::translate("SelectEqu", "0", nullptr));
+        labYpos_9->setText(QCoreApplication::translate("SelectEqu", "X\350\275\264\346\227\213\350\275\254\357\274\232", nullptr));
+        lineYpos_9->setText(QCoreApplication::translate("SelectEqu", "0", nullptr));
+        labYpos_8->setText(QCoreApplication::translate("SelectEqu", "Y\350\275\264\345\235\220\346\240\207\357\274\232", nullptr));
+        lineYpos_8->setText(QCoreApplication::translate("SelectEqu", "0", nullptr));
         labZangle->setText(QCoreApplication::translate("SelectEqu", "Z\350\275\264\346\227\213\350\275\254\357\274\232", nullptr));
-        labShow->setText(QCoreApplication::translate("SelectEqu", "showwidget", nullptr));
+        lineZangle->setText(QCoreApplication::translate("SelectEqu", "0", nullptr));
+        toolButton->setText(QCoreApplication::translate("SelectEqu", " \347\241\256\350\256\244", nullptr));
         labTitle_2->setText(QCoreApplication::translate("SelectEqu", "\346\234\272\345\231\250\344\272\272\351\200\211\345\217\226", nullptr));
         labType_2->setText(QCoreApplication::translate("SelectEqu", "\346\234\272\345\231\250\344\272\272\345\236\213\345\217\267\357\274\232", nullptr));
         btnRobotSelect->setText(QCoreApplication::translate("SelectEqu", "\346\225\260\346\215\256\345\272\223\351\200\211\345\217\226", nullptr));

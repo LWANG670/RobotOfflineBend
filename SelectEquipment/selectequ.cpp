@@ -8,23 +8,23 @@ SelectEqu::SelectEqu(QWidget *parent) :
 {
     ui->setupUi(this);
 	//初始化ui界面
+	coin3DWidget = new Coin3DQtRobotBending(ui->widget_3);
+	//SoQt::init(ui->widget_3);
 
-	SoQt::init(ui->widget_3);
+	//Coin_Root = new SoSeparator();
+	//Coin_Root->ref();
 
-	Coin_Root = new SoSeparator();
-	Coin_Root->ref();
-
-	// init robot
-	robot = new Robot();
-	Robot_Root = robot->getRobotRootNode();
-	Coin_Root->addChild(Robot_Root);
+	//// init robot
+	//robot = new Robot();
+	//Robot_Root = robot->getRobotRootNode();
+	//Coin_Root->addChild(Robot_Root);
 
 
-	simulatorView = new SoQtExaminerViewer(ui->widget_3);
-	simulatorView->setSceneGraph(Coin_Root);
-	simulatorView->setBackgroundColor(SbColor(0.60, 0.77, 0.43));
-	simulatorView->show();
-	SoQt::show(ui->widget_3);
+	//simulatorView = new SoQtExaminerViewer(ui->widget_3);
+	//simulatorView->setSceneGraph(Coin_Root);
+	//simulatorView->setBackgroundColor(SbColor(0.60, 0.77, 0.43));
+	//simulatorView->show();
+	//SoQt::show(ui->widget_3);
 	//text
 
 	//singals
@@ -36,12 +36,12 @@ SelectEqu::SelectEqu(QWidget *parent) :
 	connect(ui->btnDown, &QPushButton::clicked, this, &SelectEqu::btnDownClick);
 	//1-折弯机 2-机器人 3-对中台 4-翻面架 5-上料台 6-下料台
 
-	connect(ui->btnMachineSelect,&QPushButton::clicked, this, &SelectEqu::btnMachineSelectClick);
-	connect(ui->btnRobotSelect, &QPushButton::clicked, this, &SelectEqu::btnRobotSelectClick);
-	connect(ui->btnCenterSelect, &QPushButton::clicked, this, &SelectEqu::btnCenterSelectClick);
-	connect(ui->btnFlipSelect, &QPushButton::clicked, this, &SelectEqu::btnFlipSelectClick);
-	connect(ui->btnUpSelect, &QPushButton::clicked, this, &SelectEqu::btnUpSelectClick);
-	connect(ui->btnDownSelect, &QPushButton::clicked, this, &SelectEqu::btnDownSelectClick);
+	//connect(ui->btnMachineSelect,&QPushButton::clicked, this, &SelectEqu::btnMachineSelectClick);
+	//connect(ui->btnRobotSelect, &QPushButton::clicked, this, &SelectEqu::btnRobotSelectClick);
+	//connect(ui->btnCenterSelect, &QPushButton::clicked, this, &SelectEqu::btnCenterSelectClick);
+	//connect(ui->btnFlipSelect, &QPushButton::clicked, this, &SelectEqu::btnFlipSelectClick);
+	//connect(ui->btnUpSelect, &QPushButton::clicked, this, &SelectEqu::btnUpSelectClick);
+	//connect(ui->btnDownSelect, &QPushButton::clicked, this, &SelectEqu::btnDownSelectClick);
 
 	
 	
@@ -53,11 +53,19 @@ SelectEqu::SelectEqu(QWidget *parent) :
 SelectEqu::~SelectEqu()
 {
     delete ui;
+	if (coin3DWidget!=nullptr)
+		delete coin3DWidget;
 }
 
 void SelectEqu::resizeWindow(int width, int height)
 {
     this->setGeometry(0,0,width,height);
+}
+
+void SelectEqu::resizeEvent(QResizeEvent* event)
+{
+	if (coin3DWidget != nullptr&& ui->widget_3->width()>200)
+		coin3DWidget->resize(ui->widget_3->width(), ui->widget_3->height());
 }
 
 void SelectEqu::initChooseWidget()
@@ -81,7 +89,6 @@ void SelectEqu::btnMachineClick()
 	ui->stackedWidget->setCurrentIndex(0);
 	initChooseWidget();
 	ui->btnMachine->setStyleSheet("background-color: rgb(255,235,205);border: 3px solid;border-radius: 20px;");
-	ui->labShow->setText(QString::fromLocal8Bit("折弯机"));
 	selectChange("折弯机");
 }
 
@@ -90,7 +97,6 @@ void SelectEqu::btnRobotClick()
 	ui->stackedWidget->setCurrentIndex(1);
 	initChooseWidget();
 	ui->btnRobot->setStyleSheet("background-color: rgb(255,235,205);border: 3px solid;border-radius: 20px;");
-	ui->labShow->setText(QString::fromLocal8Bit("机器人"));
 	selectChange("机器人");
 }
 
@@ -117,6 +123,7 @@ void SelectEqu::btnUpClick()
 	ui->btnUp->setStyleSheet("background-color: rgb(255,235,205);border: 3px solid;border-radius: 20px;");
 	selectChange("上料台");
 
+
 }
 
 void SelectEqu::btnDownClick()
@@ -127,35 +134,6 @@ void SelectEqu::btnDownClick()
 	selectChange("下料台");
 }
 
-//数据库选取摁扭
-void SelectEqu::btnMachineSelectClick()
-{
-	
-}
 
-void SelectEqu::btnRobotSelectClick()
-{
-
-}
-
-void SelectEqu::btnCenterSelectClick()
-{
-
-}
-
-void SelectEqu::btnFlipSelectClick()
-{
-
-}
-
-void SelectEqu::btnUpSelectClick()
-{
-
-}
-
-void SelectEqu::btnDownSelectClick()
-{
-
-}
 
 

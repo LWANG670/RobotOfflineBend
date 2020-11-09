@@ -3,8 +3,7 @@
 
 #include <QWidget>
 #include <QPushButton>
-#include"Coin3d/QtCoin3D_Robot.h"
-#include"Coin3d/Robot.h"
+#include "Coin3DQtRobotBending.h"
 
 namespace Ui {
 class SelectEqu;
@@ -24,18 +23,9 @@ public:
 private:
     Ui::SelectEqu *ui;
 
-    //QtCoin3D_Robot* coinedRobot;
-    // Coin root node
-    SoSeparator* Coin_Root;
+    Coin3DQtRobotBending* coin3DWidget;
 
-    // Robot root node
-    SoSeparator* Robot_Root;
-
-    // Robot
-    Robot* robot;
-
-    // Viewer
-    SoQtExaminerViewer* simulatorView;
+    void resizeEvent(QResizeEvent* event);
 
     void initChooseWidget();
 
@@ -50,12 +40,12 @@ private slots:
     void btnUpClick();
     void btnDownClick();
 
-    void btnMachineSelectClick();
-    void btnRobotSelectClick();
-    void btnCenterSelectClick();
-    void btnFlipSelectClick();
-    void btnUpSelectClick();
-    void btnDownSelectClick();
+    //void btnMachineSelectClick();
+    //void btnRobotSelectClick();
+    //void btnCenterSelectClick();
+    //void btnFlipSelectClick();
+    //void btnUpSelectClick();
+    //void btnDownSelectClick();
 };
 
 #endif // SELECTEQU_H

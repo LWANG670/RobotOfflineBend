@@ -45,11 +45,17 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="coin3d">
-      <UniqueIdentifier>{cca8bc6f-8caf-4454-9a71-e5768920acd9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Dialog">
       <UniqueIdentifier>{49200cbf-b4c7-4e37-8b57-0bcbaef015e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Coin3DQt">
+      <UniqueIdentifier>{599196a5-887a-4a72-a728-ed213270cce9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Coin3DQt\inc">
+      <UniqueIdentifier>{e18fe2d3-4f95-4b83-a871-84ea3c4b8b75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Coin3DQt\src">
+      <UniqueIdentifier>{45c14232-e6dd-4175-b3b1-a3e56e839c1f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -64,15 +70,6 @@
     </ClCompile>
     <ClCompile Include="SelectEquipment\selectequ.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Coin3d\QtCoin3D_Robot.cpp">
-      <Filter>coin3d</Filter>
-    </ClCompile>
-    <ClCompile Include="Coin3d\Robot.cpp">
-      <Filter>coin3d</Filter>
-    </ClCompile>
-    <ClCompile Include="Coin3d\SoDHTransform.cpp">
-      <Filter>coin3d</Filter>
     </ClCompile>
     <ClCompile Include="BendFileReader.cpp">
       <Filter>Dialog</Filter>
@@ -89,6 +86,63 @@
     <ClCompile Include="DBInsertDlg.cpp">
       <Filter>Dialog</Filter>
     </ClCompile>
+    <ClCompile Include="CNCBend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\AixsCoin3d.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\BaseModelCoin3d.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\BasicPlaneEntity.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\BendMachineCoin3d.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\BendSurface.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\CentringCoin3d.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\Coin3DQtRobotBending.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\ConstDefine.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\CreateWorkPieceHelper.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\FileReadHelper.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\IKMath.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\IKSolverHe.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\main.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\MathHe.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\ModelTypedef.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\NurbsSurf.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\PrintHelper.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin3DQt\src\RobotCoin3d.cpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="globalvars.h">
@@ -100,15 +154,6 @@
     <QtMoc Include="SelectEquipment\selectequ.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClInclude Include="Coin3d\Robot.h">
-      <Filter>coin3d</Filter>
-    </ClInclude>
-    <ClInclude Include="Coin3d\SoDHTransform.h">
-      <Filter>coin3d</Filter>
-    </ClInclude>
-    <ClInclude Include="Coin3d\ui_QtCoin3D_Robot.h">
-      <Filter>coin3d</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
@@ -117,6 +162,57 @@
     </ClInclude>
     <ClInclude Include="resource1.h">
       <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\AixsCoin3d.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\BaseModelCoin3d.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\BasicPlaneEntity.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\BendMachineCoin3d.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\BendSurface.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\CentringCoin3d.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\CreateWorkPieceHelper.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\FileReadHelper.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\IKMath.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\IKSolverHe.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\MathHe.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\ModelTypedef.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\NurbsSurf.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\PrintHelper.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\inc\RobotCoin3d.h">
+      <Filter>Coin3DQt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\src\Init.hpp">
+      <Filter>Coin3DQt\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin3DQt\src\Test.hpp">
+      <Filter>Coin3DQt\src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -134,9 +230,6 @@
     <QtUic Include="SelectEquipment\selectequ.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="Coin3d\QtCoin3D_Robot.ui">
-      <Filter>coin3d</Filter>
-    </QtUic>
     <QtUic Include="BendFileReader.ui">
       <Filter>Dialog</Filter>
     </QtUic>
@@ -149,6 +242,9 @@
     <QtUic Include="DBInsertDlg.ui">
       <Filter>Dialog</Filter>
     </QtUic>
+    <QtUic Include="Coin3DQt\Coin3DQtRobotBending.ui">
+      <Filter>Coin3DQt</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="resource.qrc">
@@ -156,9 +252,6 @@
     </QtRcc>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="Coin3d\QtCoin3D_Robot.h">
-      <Filter>coin3d</Filter>
-    </QtMoc>
     <QtMoc Include="BendFileReader.h">
       <Filter>Dialog</Filter>
     </QtMoc>
@@ -170,6 +263,12 @@
     </QtMoc>
     <QtMoc Include="DBInsertDlg.h">
       <Filter>Dialog</Filter>
+    </QtMoc>
+    <QtMoc Include="CNCBend.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Coin3DQt\inc\Coin3DQtRobotBending.h">
+      <Filter>Coin3DQt\inc</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>

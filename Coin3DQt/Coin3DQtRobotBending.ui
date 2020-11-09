@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Coin3DQtRobotBendingClass</class>
+ <widget class="QWidget" name="Coin3DQtRobotBendingClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1071</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Coin3DQtRobotBending</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="7,1">
+   <item>
+    <widget class="QWidget" name="coin3dDisplay" native="true"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnTest">
+     <property name="text">
+      <string>测试</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

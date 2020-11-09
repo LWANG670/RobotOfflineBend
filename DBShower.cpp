@@ -18,8 +18,9 @@ DBShower::DBShower(QWidget *parent)
 	connect(ui.btnFlip, &QPushButton::clicked, this, &DBShower::btnFlipClick);
 	connect(ui.btnUp, &QPushButton::clicked, this, &DBShower::btnUpClick);
 	connect(ui.btnDown, &QPushButton::clicked, this, &DBShower::btnDownClick);
+	//插入删除操作
 	connect(ui.btnInsert, &QPushButton::clicked, this, &DBShower::btnInsertClick);
-	connect(ui.btnInsert, &QPushButton::clicked, this, &DBShower::btnDelClick);
+	connect(ui.btnDel, &QPushButton::clicked, this, &DBShower::btnDelClick);
 
 	connect(pPiecesView, SIGNAL(clicked(QModelIndex)), this, SLOT(changePiecesItem(QModelIndex)));
 	connect(pSelectPieceView, SIGNAL(clicked(QModelIndex)), this, SLOT(changeSelectItem(QModelIndex)));
@@ -65,17 +66,20 @@ void DBShower::initSqlite()
 				QMessageBox::warning(this, QString::fromLocal8Bit("打开数据库错误"), db.lastError().text());
 				return;
 			}
-			//QSqlQuery query;
-			//query.exec("create table pieces(name varchar(40) primary key,type varchar(40))");
-			//query.exec(QObject::tr("insert into pieces values('PBA0001', '折弯机机床')"));
+			QSqlQuery query;
+			query.exec("create table pieces(name varchar(40) primary key,type varchar(40))");
+			//query.exec(QObject::tr("insert into pieces values('PBA0001', '折弯机')"));
 			//query.exec(QObject::tr("insert into pieces values('ER30', '机器人')"));
 			//query.exec(QObject::tr("insert into pieces values('1005a', '翻面架')"));
 			//query.exec(QObject::tr("insert into pieces values('dzp0810', '对中台')"));
-			//query.exec("create table machines(name varchar(40) primary key,length int,width int,height int,upperheight float,lowerheight float,moldwidth float,filepath varchar(250),imagepath varchar(250),foreign key(name) references pieces(name))");
-			////query.exec("create table cars (carid int primary key, name varchar(50), factoryid int, year int, foreign key(factoryid) references factory(id))");
-			//query.exec(QObject::tr("insert into machines values('PBA0001',1930,1400,2200,250,880,1250,'D:/program/RobotOfflineBend/DBsource/BendMachine/PBA0001装配体.IGS','D:/program/RobotOfflineBend/DBsource/BendMachine/PBA0001.jpg')"));
-			//query.exec("create table robots(name varchar(40) primary key,length int,width int,height int,filepath varchar(40),imagepath varchar(40),foreign key(name) references pieces(name))");
-			//query.exec("create table centers(name varchar(40) primary key,length int,width int,height int,filepath varchar(40),imagepath varchar(40),foreign key(name) references pieces(name))");
+			query.exec("create table machines(name varchar(40) primary key,length int,width int,height int,upperheight float,lowerheight float,moldwidth float,filepath varchar(250),imagepath varchar(250),foreign key(name) references pieces(name))");
+			//query.exec("create table cars (carid int primary key, name varchar(50), factoryid int, year int, foreign key(factoryid) references factory(id))");
+			query.exec(("insert into machines values('PBA0001',1930,1400,2200,250,880,1250,'D:/program/RobotOfflineBend/DBsource/BendMachine/PBA0001装配体.IGS','D:/program/RobotOfflineBend/DBsource/BendMachine/PBA0001.jpg')"));
+			query.exec("create table robots(name varchar(40) primary key,length int,width int,height int,filepath varchar(40),imagepath varchar(40),foreign key(name) references pieces(name))");
+			query.exec("create table centers(name varchar(40) primary key,length int,width int,height int,filepath varchar(40),imagepath varchar(40),foreign key(name) references pieces(name))");
+			query.exec("create table flips(name varchar(40) primary key,length int,width int,height int,filepath varchar(40),imagepath varchar(40),foreign key(name) references pieces(name))");
+			query.exec("create table ups(name varchar(40) primary key,length int,width int,height int,filepath varchar(40),imagepath varchar(40),foreign key(name) references pieces(name))");
+			query.exec("create table downs(name varchar(40) primary key,length int,width int,height int,filepath varchar(40),imagepath varchar(40),foreign key(name) references pieces(name))");
 		}
 		else
 		{
@@ -274,3 +278,4 @@ void DBShower::btnDelClick()
 	
 
 }
+

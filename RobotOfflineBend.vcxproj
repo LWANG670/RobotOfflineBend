@@ -142,7 +142,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Coin3D\Coin3D\include;.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;debug;/include;.\Dialog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\program\RobotOfflineBend\Coin3DQt\inc;D:\program\RobotOfflineBend\Coin3DQtRobotBending\inc;D:\Coin3D\Coin3D\include;.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;debug;/include;.\Dialog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -202,9 +202,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BendFileReader.cpp" />
-    <ClCompile Include="Coin3d\QtCoin3D_Robot.cpp" />
-    <ClCompile Include="Coin3d\Robot.cpp" />
-    <ClCompile Include="Coin3d\SoDHTransform.cpp" />
+    <ClCompile Include="CNCBend.cpp" />
+    <ClCompile Include="Coin3DQt\src\AixsCoin3d.cpp" />
+    <ClCompile Include="Coin3DQt\src\BaseModelCoin3d.cpp" />
+    <ClCompile Include="Coin3DQt\src\BasicPlaneEntity.cpp" />
+    <ClCompile Include="Coin3DQt\src\BendMachineCoin3d.cpp" />
+    <ClCompile Include="Coin3DQt\src\BendSurface.cpp" />
+    <ClCompile Include="Coin3DQt\src\CentringCoin3d.cpp" />
+    <ClCompile Include="Coin3DQt\src\Coin3DQtRobotBending.cpp" />
+    <ClCompile Include="Coin3DQt\src\ConstDefine.cpp" />
+    <ClCompile Include="Coin3DQt\src\CreateWorkPieceHelper.cpp" />
+    <ClCompile Include="Coin3DQt\src\FileReadHelper.cpp" />
+    <ClCompile Include="Coin3DQt\src\IKMath.cpp" />
+    <ClCompile Include="Coin3DQt\src\IKSolverHe.cpp" />
+    <ClCompile Include="Coin3DQt\src\main.cpp" />
+    <ClCompile Include="Coin3DQt\src\MathHe.cpp" />
+    <ClCompile Include="Coin3DQt\src\ModelTypedef.cpp" />
+    <ClCompile Include="Coin3DQt\src\NurbsSurf.cpp" />
+    <ClCompile Include="Coin3DQt\src\PrintHelper.cpp" />
+    <ClCompile Include="Coin3DQt\src\RobotCoin3d.cpp" />
     <ClCompile Include="DBInsertDlg.cpp" />
     <ClCompile Include="DBShower.cpp" />
     <ClCompile Include="Dispaly.cpp" />
@@ -218,14 +234,29 @@
     <QtMoc Include="DBShower.h" />
     <QtMoc Include="Dispaly.h" />
     <QtMoc Include="DBInsertDlg.h" />
+    <QtMoc Include="CNCBend.h" />
+    <ClInclude Include="Coin3DQt\inc\AixsCoin3d.h" />
+    <ClInclude Include="Coin3DQt\inc\BaseModelCoin3d.h" />
+    <ClInclude Include="Coin3DQt\inc\BasicPlaneEntity.h" />
+    <ClInclude Include="Coin3DQt\inc\BendMachineCoin3d.h" />
+    <ClInclude Include="Coin3DQt\inc\BendSurface.h" />
+    <ClInclude Include="Coin3DQt\inc\CentringCoin3d.h" />
+    <QtMoc Include="Coin3DQt\inc\Coin3DQtRobotBending.h" />
+    <ClInclude Include="Coin3DQt\inc\CreateWorkPieceHelper.h" />
+    <ClInclude Include="Coin3DQt\inc\FileReadHelper.h" />
+    <ClInclude Include="Coin3DQt\inc\IKMath.h" />
+    <ClInclude Include="Coin3DQt\inc\IKSolverHe.h" />
+    <ClInclude Include="Coin3DQt\inc\MathHe.h" />
+    <ClInclude Include="Coin3DQt\inc\ModelTypedef.h" />
+    <ClInclude Include="Coin3DQt\inc\NurbsSurf.h" />
+    <ClInclude Include="Coin3DQt\inc\PrintHelper.h" />
+    <ClInclude Include="Coin3DQt\inc\RobotCoin3d.h" />
+    <ClInclude Include="Coin3DQt\src\Init.hpp" />
+    <ClInclude Include="Coin3DQt\src\Test.hpp" />
     <ClInclude Include="resource1.h" />
     <ClInclude Include="XMLReader.h" />
     <ClInclude Include="resource.h" />
-    <QtMoc Include="Coin3d\QtCoin3D_Robot.h" />
     <QtMoc Include="BendFileReader.h" />
-    <ClInclude Include="Coin3d\Robot.h" />
-    <ClInclude Include="Coin3d\SoDHTransform.h" />
-    <ClInclude Include="Coin3d\ui_QtCoin3D_Robot.h" />
     <ClInclude Include="globalvars.h" />
     <QtMoc Include="mainwindow.h">
     </QtMoc>
@@ -252,7 +283,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="BendFileReader.ui" />
-    <QtUic Include="Coin3d\QtCoin3D_Robot.ui" />
+    <QtUic Include="Coin3DQt\Coin3DQtRobotBending.ui" />
     <QtUic Include="DBInsertDlg.ui" />
     <QtUic Include="DBShower.ui" />
     <QtUic Include="Dispaly.ui" />
